@@ -1,0 +1,71 @@
+{
+  "menu": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "partners": "Clients"
+  },
+  "home": {
+    "services": {
+      "title": "Que proposons-nous ?",
+      "description": "Des services de haute qualité qui font la différence",
+      "items": [
+        {
+          "alt": "Achitecture SI & Cloud image",
+          "heading": "Achitecture SI & Cloud",
+          "subheading": "01",
+          "text": "Audit de votre architecture, préconisations selon votre contexte et implémentations d'architectures SI modernes et Cloud native. Patterns d'architecture : Architecture évènementielle (EDA), Architecture microservices, APIsation ...)"
+        },
+        {
+          "alt": "Développement Fullstack & DevSecOps image",
+          "heading": "Développement Fullstack & DevSecOps",
+          "subheading": "02",
+          "text": "Développement à la carte frontend et/ou backend, programmation réactive/stream,  préconisation et mise en place de votre pipeline d'intégration et déploiement continu selon les best practices GitOps"
+        },
+        {
+          "alt": "Accompagnement Lean & Agile image",
+          "heading": "Accompagnement Lean & Agile",
+          "subheading": "03",
+          "text": "Audit de l'organisation de vos équipes, mise en place méthodologie agile scrum/kanban en fonction du contexte, agilité à l'échelle SAFe"
+        }
+      ]
+    },
+    "partners": {
+      "title": "Nos expériences",
+      "description": "Nous sommes intervenus chez un grand nombre de clients, dans différents secteurs d'activité : industrie, banque/assurance, retail, ESN, etc."
+    }
+  },
+
+  "hero": {
+    "slide1": {
+      "title": "Besoin d'energie pour votre SI ou vos teams",
+      "subtitle": "Et si vous mettiez un peu d'ergol dans votre vie",
+      "plus": "En savoir plus"
+    },
+    "slide2": {
+      "title": "Besoin de débloquer votre sourcing de talents",
+      "subtitle": "Les meilleurs talents disponibles à prix réduits",
+      "plus": "Comment est-ce possible ?"
+    },
+    "slide3": {
+      "title": "Talent, comment optimiser votre veille et vos revenus?",
+      "subtitle": "Et si vous mettiez un peu d'ergol dans votre vie",
+      "plus": "En savoir plus"
+    }
+  },
+  "footer": {
+    "company": {
+      "address": "89 chemin du Berck 62185 Saint-Tricat, France",
+      "email": "contact&#64;ygamaa.com",
+      "phone": "06 08 46 28 48",
+      "website": "ygamaa.com"
+    }
+  },
+  "branding": {
+    "hero": {
+      "title": "Ergol, késako ?",
+      "description": "Un ergol, dans le domaine de l'astronautique, est une substance homogène employée seule ou en association avec d'autres substances et destinée à fournir de l'<b>énergie</b>.<br/>Nous vous proposons des ergolautes, experts du digital pour vous aider à faire décoller vos projets informatiques et monter en compétences vos équipes IT.",
+      "why": "Pourquoi ?"
+    }
+  }
+}
