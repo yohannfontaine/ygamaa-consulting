@@ -44,13 +44,13 @@ const socialLinks = [
             <div class="footer-widget__logo mb-30">
               <router-link to="/">
                 <img
-                  src="img/logo/logo-light.png"
+                  src="/img/logo/logo-light.png"
                   class="logo-dark"
                   alt="logo"
                   height="100px"
                 />
                 <img
-                  src="../assets/img/logo/logo-light.png"
+                  src="/img/logo/logo-light.png"
                   class="img-fluid logo-light"
                   alt="logo"
                 />

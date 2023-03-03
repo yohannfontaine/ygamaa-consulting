@@ -42,7 +42,7 @@ const bgImg = {
               </div>
               <div class="hero-thumb pr-100">
                 <img
-                  src="img/hero/software-thumb-1.png"
+                  src="/img/hero/software-thumb-1.png"
                   class="img-fluid"
                   alt="hero thumb"
                 />
@@ -69,7 +69,7 @@ const bgImg = {
               </div>
               <div class="hero-thumb">
                 <img
-                  src="img/hero/software-thumb-2.png"
+                  src="/img/hero/software-thumb-2.png"
                   class="img-fluid"
                   alt="hero thumb"
                 />
@@ -96,7 +96,7 @@ const bgImg = {
               </div>
               <div class="hero-thumb pr-100">
                 <img
-                  src="img/hero/software-thumb-3.png"
+                  src="/img/hero/software-thumb-3.png"
                   class="img-fluid"
                   alt="hero thumb"
                 />
