@@ -43,13 +43,13 @@ const socialLinks = [
           <div class="col-lg-6 col-md-6 footer-widget">
             <div class="footer-widget__logo mb-30">
               <router-link to="/">
-                <img
+                <nuxt-img
                   src="/img/logo/logo-light.png"
                   class="logo-dark"
                   alt="logo"
                   height="100px"
                 />
-                <img
+                <nuxt-img
                   src="/img/logo/logo-light.png"
                   class="img-fluid logo-light"
                   alt="logo"

@@ -1,6 +1,5 @@
 <script setup>
 const scrolled = ref(false);
-const load = ref(false);
 const limitPosition = ref(200);
 const lastPosition = ref(500);
 const showMenu = ref(false);
@@ -22,6 +21,7 @@ function handleScroll() {
 }
 
 onMounted(() => {
+  handleScroll();
   window.addEventListener("scroll", handleScroll);
 });
 
@@ -38,10 +38,10 @@ onDeactivated(() => {
       toggleable="lg"
       fixed="top"
       class="header-area"
-      :class="{ 'is-sticky': scrolled }"
+      :class="{ 'is-sticky': scrolled, 'menu-open': showMenu }"
     >
       <b-navbar-brand class="navbar-brand" to="/"
-        ><img :src="'img/logo/logo-light.png'" alt="logo ygamma"
+        ><nuxt-img :src="'img/logo/logo-light.png'" alt="logo ygamma"
       /></b-navbar-brand>
       <b-navbar-toggle
         target="nav_collapse"
@@ -98,6 +98,7 @@ onDeactivated(() => {
 .navbar {
   padding: 0;
   min-height: 10%;
+
   &.header-area {
     @media #{$desktop-device, $tablet-device, $large-mobile} {
       padding: 15px;
@@ -214,14 +215,6 @@ onDeactivated(() => {
   }
 }
 
-.header-button.button--white > a.btn {
-  color: #5945e6;
-}
-.header-area.is-sticky .header-button.button--white > a.btn {
-  color: #5945e6;
-  border: 2px solid #5945e6;
-}
-
 .header-area {
   &.text-white {
     .logo-dark {
@@ -242,39 +235,6 @@ onDeactivated(() => {
     }
   }
 }
-
-.header-config-wrapper {
-  // responsive
-  @media #{$desktop-device, $tablet-device, $large-mobile} {
-    margin-left: auto;
-  }
-  @media #{$small-mobile} {
-    margin-right: 0;
-  }
-  .header-config {
-    color: $theme-color-sub--heading;
-    font-size: 20px;
-    margin-right: 40px !important;
-    // responsive
-    @media #{$small-mobile} {
-      margin-right: 15px !important;
-    }
-    &.btn {
-      color: $theme-color-sub--heading;
-      transform: translateY(0);
-      border: none;
-      &:hover {
-        color: $theme-color--default;
-      }
-    }
-  }
-  .btn-secondary {
-    &:active {
-      background-color: transparent !important;
-    }
-  }
-}
-
 .header-area {
   &.is-sticky {
     animation: 0.95s ease-in-out 0s normal none 1 running fadeInDown;
@@ -302,132 +262,11 @@ onDeactivated(() => {
   }
 }
 
-/* search overlay */
-.search-overlay,
-.offcanvas-menu {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: $theme-color--black;
-  overflow: auto;
-  transition: $transition--default;
-  z-index: 9999;
-  background: rgba(0, 0, 0, 0.7);
-  cursor: url(../img/icons/light-close.png) 16 16, pointer;
-  visibility: hidden;
-  opacity: 0;
-
-  &__inner {
-    transform: translateX(-100%);
-    width: 400px;
-    height: 100%;
-    cursor: default;
-    background-color: #5e61e7;
-    background-image: linear-gradient(138deg, #5e61e7 0, #9c7af2 100%);
-    transition: $transition--default;
-    overflow-y: auto;
-
-    @media #{$extra-small-mobile} {
-      width: 300px;
-    }
-  }
-
-  &.active {
-    .search-overlay__inner {
-      transform: translateX(0);
-    }
-    visibility: visible;
-    opacity: 1;
-  }
-
-  &__header {
-    background-color: $white;
-    padding: 15px 0;
-    .mobile-navigation-close-icon {
-      position: relative;
-      cursor: pointer;
-      height: 40px;
-      width: 40px;
-      line-height: 40px;
-      display: inline-block;
-      &:before {
-        position: absolute;
-        top: 23px;
-        left: 8px;
-        content: "";
-        width: 24px;
-        height: 3px;
-        background: $theme-color--black;
-        transform-origin: 50% 50%;
-        transform: rotate(45deg);
-        transition: $transition--default;
-      }
-      &:after {
-        position: absolute;
-        top: 23px;
-        left: 8px;
-        content: "";
-        width: 24px;
-        height: 3px;
-        background: $theme-color--black;
-        transform-origin: 50% 50%;
-        transform: rotate(-45deg);
-        transition: $transition--default;
-      }
-      &:hover {
-        color: $theme-color--default;
-        &:before,
-        &:after {
-          transform: none;
-        }
-      }
-    }
-  }
-  &__body {
-    padding: 30px 40px;
-  }
-
-  &__form {
-    position: relative;
-    input {
-      background-color: transparent;
-      border: 0;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-      border-radius: 0;
-      padding: 15px 50px 15px 0;
-      width: 100%;
-      color: $white;
-
-      &::placeholder {
-        color: $white;
-        transition: $transition--default;
-      }
-    }
-
-    button {
-      position: absolute;
-      right: 0;
-      top: 50%;
-      transform: translateY(-50%);
-      background: none;
-      border: none;
-      color: $white;
-    }
-  }
-}
-
-.header-config-wrapper {
-  order: 3;
-  @media #{$desktop-device, $tablet-device, $large-mobile} {
-    order: 2;
-  }
-}
 div#nav_collapse {
   @media #{$desktop-device, $tablet-device, $large-mobile} {
     order: 3;
   }
+
   transition: top 300ms cubic-bezier(0.17, 0.04, 0.03, 0.94);
 }
 .navbar-toggler {

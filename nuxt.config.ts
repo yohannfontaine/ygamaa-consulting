@@ -3,6 +3,7 @@ export default defineNuxtConfig({
     modules: [
       '@nuxtjs/i18n',
       '@nuxtjs/color-mode',
+      '@nuxt/image-edge',
       'bootstrap-vue-next/nuxt',
       'nuxt-swiper',
     ],

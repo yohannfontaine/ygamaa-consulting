@@ -8,6 +8,7 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
+    "@nuxt/image-edge": "^1.0.0-27954023.4cee565",
     "@nuxtjs/color-mode": "^3.2.0",
     "@popperjs/core": "^2.11.6",
     "bootstrap": "^5.2.3",

@@ -41,7 +41,7 @@ const bgImg = {
                 </a>
               </div>
               <div class="hero-thumb pr-100">
-                <img
+                <nuxt-img
                   src="/img/hero/software-thumb-1.png"
                   class="img-fluid"
                   alt="hero thumb"
@@ -68,7 +68,7 @@ const bgImg = {
                 </a>
               </div>
               <div class="hero-thumb">
-                <img
+                <nuxt-img
                   src="/img/hero/software-thumb-2.png"
                   class="img-fluid"
                   alt="hero thumb"
@@ -95,7 +95,7 @@ const bgImg = {
                 </a>
               </div>
               <div class="hero-thumb pr-100">
-                <img
+                <nuxt-img
                   src="/img/hero/software-thumb-3.png"
                   class="img-fluid"
                   alt="hero thumb"
