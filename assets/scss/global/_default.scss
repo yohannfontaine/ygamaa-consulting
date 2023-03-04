@@ -544,88 +544,6 @@ ul {
         }
     }
 }
-/*===================================
-    - Breadvrumb  
-=================================*/
-
-.gradient--secondary {
-    background-image: $gradient--secondary;
-}
-
-.breadcrumb-area {
-    border-bottom-width: 0px;
-    border-bottom-color: rgba(0, 0, 0, 0);
-    padding-top: 196px;
-    padding-bottom: 114px;
-    @media #{$large-mobile,$tablet-device,$desktop-device}{
-        padding-top: 130px;
-        padding-bottom: 80px;
-    }
-}
-
-.breadcrumb-list {
-    margin-top: 15px;
-    & li {
-        display: inline-block;
-        font-size: 14px;
-        font-weight: 500;
-        letter-spacing: 2px;
-        line-height: 1.58;
-        text-transform: uppercase;
-        & a {
-            position: relative;
-            &::after {
-                content: '';
-                width: 0;
-                height: 1px;
-                bottom: 0;
-                position: absolute;
-                left: auto;
-                right: 0;
-                z-index: -1;
-                transition: width 0.6s cubic-bezier(0.25, 0.8, 0.25, 1) 0s;
-                background: currentColor;
-            }
-            &:hover {
-                &::after {
-                    width: 100%;
-                    left: 0;
-                    right: auto;
-                    z-index: 0;
-                }
-            }
-        }
-        &.active {
-            color: #6D70A6;
-        }
-    }
-}
-
-/* bg body color */
-.bg-body-color {
-    background: #3498DB;
-}
-.error404 {
-    background: url("../img/bg/page-404-bg.jpg");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: fixed;
-    background-size: cover;
-    display: flex;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-    .error-image {
-        img {
-            max-width: 70%;
-            // res
-            @media #{$small-mobile}{
-                max-width: 100%;
-            }
-        }
-    }
-}
-
 
 /*=====  End of Default CSS  ======*/
 
@@ -642,33 +560,6 @@ ul {
     &.animated{
         transform: translateY(100px);
         animation: moveVertical .65s ease forwards;
-    }
-}
-
-/*---- banner sass start ----*/
-.banner-one-sass {
-    @media #{$laptop-device}{
-        padding-top: 120px;
-    }
-    @media #{$desktop-device}{
-        padding-top: 130px;
-    }
-    @media #{$tablet-device}{
-        padding-top: 70px;
-    }
-    @media #{$large-mobile}{
-        padding-bottom: 20px;
-    }
-    
-}
-/*---- banner sass emd ----*/
-
-.newsletter-form--one {
-    ::-webkit-input-placeholder {
-        color: $white;
-    }
-      ::-moz-placeholder {
-        color: $white;
     }
 }
 

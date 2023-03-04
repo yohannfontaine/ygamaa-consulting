@@ -11,17 +11,17 @@ const availableLocales = computed(() => {
   <div class="main-container">
     <!-- Navbar section -->
     <Header />
-    <!-- hero section -->
+    <!-- Hero section -->
     <Hero />
 
-    <!-- about section -->
+    <!-- About section -->
     <HeroBranding />
 
-    <!-- intro section -->
+    <!-- Service section -->
     <EbookIntro />
 
-    <!-- partner client section -->
-    <div class="brand-logo-area section-space--ptb_120" id="partner">
+    <!-- Partners section -->
+    <div class="brand-logo-area section-space--ptb_30" id="partner">
       <div class="container">
         <div class="row">
           <div class="col-lg-12">
@@ -40,8 +40,7 @@ const availableLocales = computed(() => {
       </div>
     </div>
 
-    <!-- Team section de start up-->
-    <!-- footer section -->
+    <!-- Footer section -->
     <FooterMain />
   </div>
 </template>

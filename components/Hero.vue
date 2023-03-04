@@ -1,7 +1,4 @@
 <script setup>
-const bgImg = {
-  backgroundImage: 'url("img/hero/software-shape.png")',
-};
 </script>
 
 <template>
@@ -21,7 +18,7 @@ const bgImg = {
             prevEl: '.swiper-button-prev',
           }"
         >
-          <SwiperSlide :style="bgImg">
+          <SwiperSlide>
             <div class="hero-item">
               <div class="hero-content">
                 <h2 class="h1 hero-content-title">
@@ -50,7 +47,7 @@ const bgImg = {
               </div>
             </div>
           </SwiperSlide>
-          <SwiperSlide :style="bgImg">
+          <SwiperSlide>
             <div class="hero-item">
               <div class="hero-content">
                 <h2 class="h1 hero-content-title">
@@ -78,7 +75,7 @@ const bgImg = {
               </div>
             </div>
           </SwiperSlide>
-          <SwiperSlide :style="bgImg">
+          <SwiperSlide>
             <div class="hero-item">
               <div class="hero-content">
                 <h2 class="h1 hero-content-title">
@@ -159,7 +156,6 @@ const bgImg = {
   }
   &-content-title {
     font-weight: 500;
-    color: #2e3280;
     line-height: 1.3;
     // responsive
     @media #{$xlmax-device} {
@@ -204,6 +200,7 @@ const bgImg = {
   .swiper-slide {
     background-color: $white;
     background-repeat: no-repeat;
+    background-image: url("img/hero/software-shape.png");
     &-active {
       .hero-thumb {
         img {
@@ -227,6 +224,7 @@ const bgImg = {
 .dark-mode .hero-software {
   .swiper-slide {
     background-color: $black;
+    background-image: none;
   }
 }
 

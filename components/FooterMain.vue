@@ -19,28 +19,7 @@ const socialLinks = [
     <div class="footer-area section-space--ptb_90">
       <div class="container">
         <div class="row footer-widget-wrapper">
-          <div class="col-lg-6 col-md-6 footer-widget">
-            <h6 class="footer-widget__title mb-20">Who we are</h6>
-            <ul class="footer-widget__list">
-              <li>
-                <a href="#about" class="hover-style-link">About us</a>
-              </li>
-              <li>
-                <router-link to="/" class="hover-style-link"
-                  >Before you go</router-link
-                >
-              </li>
-              <li>
-                <router-link to="/" class="hover-style-link"
-                  >Online check in</router-link
-                >
-              </li>
-              <li>
-                <router-link to="/" class="hover-style-link">FAQ</router-link>
-              </li>
-            </ul>
-          </div>
-          <div class="col-lg-6 col-md-6 footer-widget">
+          <div class="col-lg-12 col-md-12 footer-widget">
             <div class="footer-widget__logo mb-30">
               <router-link to="/">
                 <nuxt-img
@@ -66,7 +45,7 @@ const socialLinks = [
                 }}</a>
               </li>
               <li>
-                <a href="tel:0123456789" class="hover-style-link">{{
+                <a href="tel:0608462848" class="hover-style-link">{{
                   $t("footer.company.phone")
                 }}</a>
               </li>

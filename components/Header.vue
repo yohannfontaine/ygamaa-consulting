@@ -38,7 +38,11 @@ onDeactivated(() => {
       toggleable="lg"
       fixed="top"
       class="header-area"
-      :class="{ 'is-sticky': scrolled, 'menu-open': showMenu }"
+      :class="{
+        'is-sticky': scrolled,
+        'menu-open': showMenu,
+        'navbar-dark': $colorMode.value == 'dark',
+      }"
     >
       <b-navbar-brand class="navbar-brand" to="/"
         ><nuxt-img
@@ -265,6 +269,13 @@ onDeactivated(() => {
   }
 }
 
+.dark-mode .header-area {
+  &.is-sticky {
+    box-shadow: 0 8px 20px 0 rgba(200, 200, 200, 0.3);
+    background-color: $black;
+  }
+}
+
 div#nav_collapse {
   @media #{$desktop-device, $tablet-device, $large-mobile} {
     order: 3;
@@ -275,7 +286,6 @@ div#nav_collapse {
 .navbar-toggler {
   @media #{$desktop-device, $tablet-device, $large-mobile} {
     order: 3;
-    background-color: $white;
   }
   &:focus {
     box-shadow: 0 0 0 0;
