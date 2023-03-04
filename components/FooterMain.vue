@@ -48,11 +48,13 @@ const socialLinks = [
                   class="logo-dark"
                   alt="logo"
                   height="100px"
+                  format="webp"
                 />
                 <nuxt-img
                   src="/img/logo/logo-light.png"
                   class="img-fluid logo-light"
                   alt="logo"
+                  format="webp"
                 />
               </router-link>
             </div>

@@ -45,6 +45,7 @@ const bgImg = {
                   src="/img/hero/software-thumb-1.png"
                   class="img-fluid"
                   alt="hero thumb"
+                  format="webp"
                 />
               </div>
             </div>
@@ -72,6 +73,7 @@ const bgImg = {
                   src="/img/hero/software-thumb-2.png"
                   class="img-fluid"
                   alt="hero thumb"
+                  format="webp"
                 />
               </div>
             </div>
@@ -99,6 +101,7 @@ const bgImg = {
                   src="/img/hero/software-thumb-3.png"
                   class="img-fluid"
                   alt="hero thumb"
+                  format="webp"
                 />
               </div>
             </div>
@@ -199,7 +202,7 @@ const bgImg = {
 // slider text animation
 .hero-software {
   .swiper-slide {
-    background-color: #fff;
+    background-color: $white;
     background-repeat: no-repeat;
     &-active {
       .hero-thumb {
@@ -218,6 +221,12 @@ const bgImg = {
         animation-delay: 0.5s;
       }
     }
+  }
+}
+
+.dark-mode .hero-software {
+  .swiper-slide {
+    background-color: $black;
   }
 }
 

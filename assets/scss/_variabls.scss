@@ -3,6 +3,7 @@
 $theme-color-6: #e84855;
 $theme-color--default: #5945e6;
 $theme-color--heading: #2e3280;
+$theme-color--heading: #2e3280;
 $theme-color--black: #333333;
 $theme-color--green: #38cb89;
 $theme-color-sub--heading: #6d70a6;
@@ -30,10 +31,11 @@ $body-font-weight: 400;
 $body-line-height: 1.74;
 $body-font-size: 15px;
 $body-bg-color: $white;
-$body-bg-color-dark: $theme-color--black;
+$body-bg-color-dark: $black;
 
 // Heading Text
 $heading-text-color: $theme-color--heading;
+$heading-text-color-dark: #B19DCF;
 $heading-font-weight: 500;
 
 

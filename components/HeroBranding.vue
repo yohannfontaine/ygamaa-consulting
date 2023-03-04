@@ -34,6 +34,10 @@ const bgImg = {
   padding-top: 10%;
 }
 
+.dark-mode .hero-branding {
+  background-color: $black;
+}
+
 .hero {
   &-branding {
     display: flex;

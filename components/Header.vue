@@ -41,7 +41,10 @@ onDeactivated(() => {
       :class="{ 'is-sticky': scrolled, 'menu-open': showMenu }"
     >
       <b-navbar-brand class="navbar-brand" to="/"
-        ><nuxt-img :src="'img/logo/logo-light.png'" alt="logo ygamma"
+        ><nuxt-img
+          format="webp"
+          :src="'img/logo/logo-light.png'"
+          alt="logo ygamma"
       /></b-navbar-brand>
       <b-navbar-toggle
         target="nav_collapse"
@@ -79,7 +82,7 @@ onDeactivated(() => {
             ><span>{{ $t("menu.contact") }}</span></b-nav-item
           >
         </b-navbar-nav>
-        <!--<DarkModeSwitcher></DarkModeSwitcher>-->
+        <DarkModeSwitcher></DarkModeSwitcher>
       </b-collapse>
     </b-navbar>
   </ClientOnly>
