@@ -76,30 +76,6 @@
 }
 
 
-
-
-.feature-list__two {
-    
-}
-.start-ups-feature-wrap {
-    width: 970px; 
-    max-width: 100%;
-    margin: auto;
-}
-.modern-grid {
-    display: grid;
-    grid-template-columns: repeat( 6,1fr);
-    grid-row-gap: 30px;
-    
-    @media #{$tablet-device}{
-        grid-template-columns: repeat( 3,1fr);
-    }
-    @media #{$large-mobile}{
-        grid-template-columns: repeat( 2,1fr);
-    }
-    
-}
-
 /* ============== */
 
 .dark-mode .service-grid > a{
@@ -119,17 +95,6 @@
                     transform: translateY(-5px);
                     box-shadow: 0 18px 40px 5px rgba(51, 51, 51, 0.1)
                 }
-            }
-
-            & .image__media {
-                position: relative;
-                background: #f6f5f9;
-                border-radius: 50%;
-                height: 60px;
-                line-height: 60px;
-                width: 60px;
-                margin-bottom: 16px;
-                text-align: center;
             }
         }
         &--four {}
@@ -174,17 +139,6 @@
                 flex-direction: column;
             }
         }
-
-        & .image__media {
-            position: relative;
-            flex-shrink: 0;
-            margin: 0 13px 0 0;
-            min-width: 185px;
-            text-align: center;
-            @media #{$small-mobile}{
-                margin-bottom: 20px;
-            }
-        }
         & .heading{
             color: $theme-color--default;
             margin-bottom: 15px;
@@ -195,53 +149,6 @@
     }   
 }
     
-
-
-
-.ht-clinic-service-box {
-    transition: $transition--default;
-    & .content-header {
-        display: flex;
-        align-items: center;
-        margin-bottom: 13px;
-        & .icon {
-            width: 60px;
-            height: 60px;
-            line-height: 60px;
-            text-align: center;
-            border-radius: 8px;
-            font-size: 30px;
-            color: #fff;
-            background-image: linear-gradient(-135deg, #f8c59b 0%, #e68c60 50%, #f8c59b 100%);
-            background-position: left center;
-            background-size: 200% auto;
-            flex-shrink: 0;
-            margin-right: 19px;
-            transition: $transition--default;
-        }
-        & .heading {
-            color: #6d70a6;
-        }
-    }
-    & .content-body {
-        & .service_text {
-            color: $body-text-color;
-        }
-    }
-    &:hover{
-        transform: translateY(-5px);
-        & .content-header {
-            & .icon {
-                background-position: right center;
-            }
-            & .heading {
-                color: $theme-color--heading;
-            }
-        }
-    }
-}
-
-
 .ht-product-service-box {
     float: left;
     width: 50%;

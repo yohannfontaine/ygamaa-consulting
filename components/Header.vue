@@ -276,14 +276,22 @@ onDeactivated(() => {
   }
 }
 
-div#nav_collapse {
+.menu-open #nav_collapse {
+  background-color: $white;
+  padding: 5px 20px;
+}
+
+.dark-mode .menu-open #nav_collapse {
+  background-color: $black;
+}
+
+#nav_collapse {
   @media #{$desktop-device, $tablet-device, $large-mobile} {
     order: 3;
   }
-
-  transition: top 300ms cubic-bezier(0.17, 0.04, 0.03, 0.94);
 }
 .navbar-toggler {
+  z-index: 1000;
   @media #{$desktop-device, $tablet-device, $large-mobile} {
     order: 3;
   }

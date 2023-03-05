@@ -12,18 +12,22 @@
   }
 html, body {
     height: 100%;
-    background-color: $body-bg-color;
+
+    &.light-mode body{
+        color-scheme: light;
+        background-color: $body-bg-color;
+    }
     
-    &.dark-mode{
+    &.dark-mode body{
         color-scheme: dark;
         background-color: $body-bg-color-dark;
-        color: $white;
     }
     
 }
 
 
 body{
+  height: 100%;
   line-height: $body-line-height;
   font-size: $body-font-size;
   font-style: normal;
@@ -37,6 +41,8 @@ body{
   &.no-overflow{
     overflow: hidden;
   }
+
+  
 
 }
 
