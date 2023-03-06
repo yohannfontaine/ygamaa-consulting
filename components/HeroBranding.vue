@@ -13,12 +13,12 @@ const bgImg = {
       <div class="hero-branding">
         <div class="hero-content">
           <h2 class="h1 hero-content-title">{{ $t("branding.hero.title") }}</h2>
-          <h6
+          <p
             class="hero-content-subtitle mt-20"
             v-html="$t('branding.hero.description')"
-          ></h6>
+          ></p>
           <div class="slider-button mt-30">
-            <a href="mailto:demo@example.com" class="ht-btn ht-btn-md">{{
+            <a href="#contact" class="ht-btn ht-btn-md">{{
               $t("branding.hero.more")
             }}</a>
           </div>
@@ -33,12 +33,10 @@ const bgImg = {
 .hero {
   &-branding {
     display: flex;
-    // responsive
-    @media #{$large-mobile} {
-      height: 550px;
-    }
   }
   &-content {
+    display: flex;
+    flex-direction: column;
     width: 540px;
     padding-top: 30px;
     margin-left: auto;
@@ -64,6 +62,10 @@ const bgImg = {
       line-height: 1.8;
     }
   }
+}
+
+.slider-button {
+  align-self: end;
 }
 /*---- hero branding end ----*/
 </style>

@@ -27,10 +27,7 @@
                 <h6 class="hero-content-subtitle">
                   {{ $t("hero.slide1.subtitle") }}
                 </h6>
-                <a
-                  href="mailto:yohann.fontaine@gmail.com"
-                  class="btn btn--green"
-                >
+                <a href="#about" class="ht-btn ht-btn-md">
                   <span class="btn-icon ml-0 mr-2"
                     ><i class="fa fa-arrow-alt-to-bottom"></i
                   ></span>
@@ -56,10 +53,7 @@
                 <h6 class="hero-content-subtitle">
                   {{ $t("hero.slide2.subtitle") }}
                 </h6>
-                <a
-                  href="mailto:yohann.fontaine@gmail.com"
-                  class="btn btn--green"
-                >
+                <a href="#about" class="ht-btn ht-btn-md">
                   <span class="btn-icon ml-0 mr-2"
                     ><i class="fa fa-arrow-alt-to-bottom"></i></span
                   >{{ $t("hero.slide2.plus") }}
@@ -84,10 +78,7 @@
                 <h6 class="hero-content-subtitle">
                   {{ $t("hero.slide3.subtitle") }}
                 </h6>
-                <a
-                  href="mailto:yohann.fontaine@gmail.com"
-                  class="btn btn--green"
-                >
+                <a href="#about" class="ht-btn ht-btn-md">
                   <span class="btn-icon ml-0 mr-2"
                     ><i class="fa fa-arrow-alt-to-bottom"></i></span
                   >{{ $t("hero.slide3.plus") }}
@@ -114,6 +105,11 @@
 
 <style lang="scss" scoped>
 /*---- hero software style start ----*/
+.swiper-slide {
+  @media #{$large-mobile} {
+    padding-top: 60px;
+  }
+}
 .hero {
   &-item {
     height: 970px;

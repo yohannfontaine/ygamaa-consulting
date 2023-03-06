@@ -19,13 +19,13 @@
           "alt": "Image d'une fusée au décollage",
           "heading": "Audit & Optimisation",
           "subheading": "01",
-          "text": "Audit de votre architecture, préconisations selon votre contexte et implémentation d'architectures SI modernes et Cloud native. Patterns d'architecture : Architecture évènementielle (EDA), Architecture microservices, APIsation ...), AI, Low/No Code. Conseil en GreenIT, Ecoconception, Numérique responsable"
+          "text": "Audit de votre architecture, préconisations d'optimisation selon votre contexte et implémentation d'architectures SI modernes et Cloud native. Patterns d'architecture : Architecture évènementielle (EDA), Architecture microservices, APIsation ...), AI, Low/No Code. Conseil en GreenIT, Ecoconception, Numérique responsable"
         },
         {
           "alt": "Image d'un développeur derrière 2 écrans",
           "heading": "Développement Fullstack & DevSecOps",
           "subheading": "02",
-          "text": "Développement à la carte de votre site web, application mobile, API, etc. Développement frontend et/ou backend, préconisation et mise en place de votre pipeline d'intégration et déploiement continu (CI/CD) selon les best practices GitOps. Mise en place de contrôle de qualité et bonnes pratiques de sécurité"
+          "text": "Développement à la carte de votre site web, application mobile, API, etc. Développement frontend et/ou backend, préconisation et mise en place de votre pipeline d'intégration et déploiement continu (CI/CD) selon les best practices GitOps et indicateurs DORA. Mise en place de contrôle de qualité et bonnes pratiques de sécurité"
         },
         {
           "alt": "Image de 2 personnes devant un tableu kanban",
@@ -72,8 +72,8 @@
   "branding": {
     "hero": {
       "title": "Qui sommes-nous ?",
-      "description": "Des experts du numérique, passionnés et engagés pour accompagner nos clients dans leur transformation digitale. Nous travaillons avec nos clients pour créer leurs solutions numériques qui sont à la fois innovantes, performantes et respectueuses de l'environnement. Rejoignez-nous dans notre aventure pour co-construire un avenir numérique durable.<br/>Nous intervenons à temps partiel pour maximiser le ROI de nos clients et suivant le Principe de Paret. <br/><br/>Nos valeurs principales que nous transmettons sur le terrain sont : simplicité, agilité, innovation, amélioration continue et esprit d'équipe",
-      "more": "Parlons-en"
+      "description": "Des experts du numérique, passionnés et engagés pour accompagner nos clients dans leur transformation digitale et travailler avec eux pour créer des solutions numériques à la fois innovantes, performantes et respectueuses de l'environnement. Rejoignez-nous dans notre aventure pour co-construire un avenir numérique durable.<br/><br/>Nos valeurs principales que nous transmettons sur le terrain sont : simplicité, agilité, innovation, amélioration continue et esprit d'équipe",
+      "more": "Contactez nous !"
     }
   }
 }
