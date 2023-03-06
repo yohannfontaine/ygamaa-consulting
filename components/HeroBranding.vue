@@ -1,14 +1,8 @@
 <script setup>
-const bgImg = {
-  backgroundImage: "url('img/undraw_maker_launch.svg')",
-  backgroundPosition: "bottom 0px left 20px",
-  backgroundSize: "50%",
-  backgroundRepeat: "no-repeat",
-};
 </script>
 
 <template>
-  <div class="hero-branding bg-cover section" :style="bgImg" id="about">
+  <div class="hero-branding bg-cover section" id="about">
     <div class="container-fluid container-fluid--cp-150">
       <div class="hero-branding">
         <div class="hero-content">
@@ -30,6 +24,13 @@ const bgImg = {
 
 <style lang="scss" scoped>
 /*---- hero branding start ----*/
+#about {
+  background-image: url("img/undraw_maker_launch.svg");
+  background-position: bottom 0px left 20px;
+  background-size: 48%;
+  background-repeat: no-repeat;
+}
+
 .hero {
   &-branding {
     display: flex;

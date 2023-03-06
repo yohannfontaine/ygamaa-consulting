@@ -24,9 +24,9 @@
                 <h2 class="h1 hero-content-title">
                   {{ $t("hero.slide1.title") }}
                 </h2>
-                <h6 class="hero-content-subtitle">
+                <p class="hero-content-subtitle">
                   {{ $t("hero.slide1.subtitle") }}
-                </h6>
+                </p>
                 <a href="#about" class="ht-btn ht-btn-md">
                   <span class="btn-icon ml-0 mr-2"
                     ><i class="fa fa-arrow-alt-to-bottom"></i
@@ -50,9 +50,9 @@
                 <h2 class="h1 hero-content-title">
                   {{ $t("hero.slide2.title") }}
                 </h2>
-                <h6 class="hero-content-subtitle">
+                <p class="hero-content-subtitle">
                   {{ $t("hero.slide2.subtitle") }}
-                </h6>
+                </p>
                 <a href="#about" class="ht-btn ht-btn-md">
                   <span class="btn-icon ml-0 mr-2"
                     ><i class="fa fa-arrow-alt-to-bottom"></i></span
@@ -75,9 +75,9 @@
                 <h2 class="h1 hero-content-title">
                   {{ $t("hero.slide3.title") }}
                 </h2>
-                <h6 class="hero-content-subtitle">
+                <p class="hero-content-subtitle">
                   {{ $t("hero.slide3.subtitle") }}
-                </h6>
+                </p>
                 <a href="#about" class="ht-btn ht-btn-md">
                   <span class="btn-icon ml-0 mr-2"
                     ><i class="fa fa-arrow-alt-to-bottom"></i></span
@@ -107,7 +107,7 @@
 /*---- hero software style start ----*/
 .swiper-slide {
   @media #{$large-mobile} {
-    padding-top: 60px;
+    padding-top: 25px;
   }
 }
 .hero {
@@ -123,7 +123,7 @@
     }
     @media #{$tablet-device, $large-mobile} {
       flex-direction: column;
-      justify-content: center;
+      justify-content: start;
       padding-top: 0;
     }
     @media #{$extra-small-mobile} {
@@ -168,7 +168,7 @@
     color: #7e7e7e;
     font-weight: 400;
     padding-top: 15px;
-    padding-bottom: 55px;
+    padding-bottom: 35px;
   }
   &-thumb {
     @media #{$xlmax-device} {

@@ -78,14 +78,14 @@
 
 /* ============== */
 
-.dark-mode .service-grid > a{
+.dark-mode .service-grid > span{
     background-color: $body-bg-color-dark;
 }
 
 .service-grid {
     & .ht-service-box {
         &--two {
-            & > a {
+            & > span {
                 padding: 35px 40px 49px;
                 border-radius: 5px;
                 display: block;

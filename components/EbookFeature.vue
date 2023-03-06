@@ -7,7 +7,7 @@
     >
       <div class="service-grid">
         <div class="ht-service-box--two text-center">
-          <a href="">
+          <span>
             <div class="image mb-20">
               <img
                 :src="ebook.icon"
@@ -26,7 +26,7 @@
                 {{ $t(`home.services.items[${index}].text`) }}
               </div>
             </div>
-          </a>
+          </span>
         </div>
       </div>
     </div>

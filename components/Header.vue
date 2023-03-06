@@ -280,6 +280,10 @@ onDeactivated(() => {
     padding: 5px 20px;
   }
 
+  .menu-open .navbar-toggler {
+    border-color: $theme-color--default;
+  }
+
   .dark-mode .menu-open #nav_collapse {
     background-color: $black;
   }
