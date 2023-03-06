@@ -15,7 +15,7 @@ const socialLinks = [
 
 
 <template>
-  <div class="footer-area-wrapper" id="contact">
+  <div class="footer-area-wrapper section" id="contact">
     <div class="footer-area section-space--ptb_90">
       <div class="container">
         <div class="row footer-widget-wrapper">
@@ -38,7 +38,11 @@ const socialLinks = [
               </router-link>
             </div>
             <ul class="footer-widget__list">
-              <li>{{ $t("footer.company.address") }}</li>
+              <li>
+                {{ $t("footer.company.address.street") }}<br />{{
+                  $t("footer.company.address.city")
+                }}
+              </li>
               <li>
                 <a href="mailto:demo@example.com" class="hover-style-link">{{
                   $t("footer.company.email")

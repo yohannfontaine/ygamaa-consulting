@@ -8,7 +8,7 @@ const bgImg = {
 </script>
 
 <template>
-  <section class="hero-branding bg-cover" :style="bgImg" id="about">
+  <div class="hero-branding bg-cover section" :style="bgImg" id="about">
     <div class="container-fluid container-fluid--cp-150">
       <div class="hero-branding">
         <div class="hero-content">
@@ -25,15 +25,11 @@ const bgImg = {
         </div>
       </div>
     </div>
-  </section>
+  </div>
 </template>
 
 <style lang="scss" scoped>
 /*---- hero branding start ----*/
-#about {
-  padding-top: 10%;
-}
-
 .hero {
   &-branding {
     display: flex;

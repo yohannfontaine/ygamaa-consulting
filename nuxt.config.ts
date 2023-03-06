@@ -31,6 +31,7 @@ export default defineNuxtConfig({
           file: 'fr-FR.json'
         }
       ],
+      baseUrl: 'https://ygamaa-consulting.web.app',
       lazy: true,
       langDir: 'lang',
       defaultLocale: 'fr',

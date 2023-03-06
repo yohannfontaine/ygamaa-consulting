@@ -1,4 +1,8 @@
 {
+  "meta": {
+    "title": "Y-GAMAA Consulting, votre partenaire digital",
+    "description": "Y-GAMAA Consulting est une société qui propose une expertise dans l'accompagnement, l'architecture et le développement de produits numériques"
+  },
   "menu": {
     "home": "Accueil",
     "about": "A propos",
@@ -9,54 +13,57 @@
   "home": {
     "services": {
       "title": "Que proposons-nous ?",
-      "description": "Des services de haute qualité qui font la différence",
+      "description": "Des services de qualité qui font la différence",
       "items": [
         {
-          "alt": "Audit & Optimisation logo",
+          "alt": "Image d'une fusée au décollage",
           "heading": "Audit & Optimisation",
           "subheading": "01",
-          "text": "Audit de votre architecture, préconisations selon votre contexte et implémentations d'architectures SI modernes et Cloud native. Patterns d'architecture : Architecture évènementielle (EDA), Architecture microservices, APIsation ...). Conseil en GreenIT, Ecoconception, Numérique responsable"
+          "text": "Audit de votre architecture, préconisations selon votre contexte et implémentation d'architectures SI modernes et Cloud native. Patterns d'architecture : Architecture évènementielle (EDA), Architecture microservices, APIsation ...), AI, Low/No Code. Conseil en GreenIT, Ecoconception, Numérique responsable"
         },
         {
-          "alt": "Développement Fullstack & DevSecOps logo",
+          "alt": "Image d'un développeur derrière 2 écrans",
           "heading": "Développement Fullstack & DevSecOps",
           "subheading": "02",
-          "text": "Développement à la carte de votre site web ou application mobile. Développement frontend et/ou backend, programmation réactive/stream,  préconisation et mise en place de votre pipeline d'intégration et déploiement continu selon les best practices GitOps"
+          "text": "Développement à la carte de votre site web, application mobile, API, etc. Développement frontend et/ou backend, préconisation et mise en place de votre pipeline d'intégration et déploiement continu (CI/CD) selon les best practices GitOps. Mise en place de contrôle de qualité et bonnes pratiques de sécurité"
         },
         {
-          "alt": "Accompagnement Lean & Agile logo",
-          "heading": "Accompagnement Lean & Agile",
+          "alt": "Image de 2 personnes devant un tableu kanban",
+          "heading": "Accompagnement Tech et/ou Lean & Agile",
           "subheading": "03",
-          "text": "Audit de l'organisation de vos équipes, mise en place méthodologie agile scrum/kanban en fonction du contexte, agilité à l'échelle SAFe"
+          "text": "Audit de l'organisation de vos équipes, mise en place méthodologie agile scrum/kanban en fonction du contexte, agilité à l'échelle SAFe. Accompagnement de startup dans le démarrage de leur équipe tech, CTO as a service"
         }
       ]
     },
     "partners": {
       "title": "Nos expériences",
-      "description": "Plus de 20 d'expériences dans l'architecture, la conception et le développement de produits digitaux. Des mission réussies chez un grand nombre de clients, dans différents secteurs d'activité : industrie, banque/assurance, retail, ESN, etc."
+      "description": "20 ans d'expérience dans l'accompagnement, l'architecture, la conception et le développement de produits digitaux. Des mission réussies chez un grand nombre de clients renommés, dans différents secteurs d'activité : industrie, banque/assurance, retail, ESN, etc."
     }
   },
 
   "hero": {
     "slide1": {
-      "title": "Besoin d'energie pour votre SI ou vos teams",
-      "subtitle": "Et si vous mettiez un peu d'ergol dans votre vie",
+      "title": "Vous cherchez un accompagnement pour votre transformation digitale ?",
+      "subtitle": "Notre équipe expérimentée peut vous accompagner dans la modernisation et l'amélioration des vos systèmes d'information et la mise en place d'une culture agile",
       "plus": "En savoir plus"
     },
     "slide2": {
-      "title": "Besoin de débloquer votre sourcing de talents",
-      "subtitle": "Les meilleurs talents disponibles à prix réduits",
-      "plus": "Comment est-ce possible ?"
+      "title": "Vous souhaitez constuire un nouveau produit numérique ?",
+      "subtitle": "Notre équipe de passionnés peut vous accompager depuis l'étude jusqu'à la maintenance en passant par le développement de votre produit numérique, site internet, application mobile, API...",
+      "plus": "En savoir plus"
     },
     "slide3": {
-      "title": "Talent, comment optimiser votre veille et vos revenus?",
-      "subtitle": "Et si vous mettiez un peu d'ergol dans votre vie",
+      "title": "Besoin d'expertise pour vos problèmes IT complexes ?",
+      "subtitle": "Notre passion associée à notre expertise, à notre grande expérience et notre solide bagage académique nous permettent d'intervenir sur des missions à fortes valeurs ajoutés et dans la résolution de problèmes complexes",
       "plus": "En savoir plus"
     }
   },
   "footer": {
     "company": {
-      "address": "89 chemin du Berck 62185 Saint-Tricat, France",
+      "address": {
+        "street": "89 chemin du Berck",
+        "city": "62185 Saint-Tricat, France"
+      },
       "email": "contact{'@'}ygamaa.com",
       "phone": "06 08 46 28 48",
       "website": "ygamaa.com"
@@ -65,8 +72,8 @@
   "branding": {
     "hero": {
       "title": "Qui sommes-nous ?",
-      "description": "Un ergol, dans le domaine de l'astronautique, est une substance homogène employée seule ou en association avec d'autres substances et destinée à fournir de l'<b>énergie</b>.<br/>Nous vous proposons des ergolautes, experts du digital pour vous aider à faire décoller vos projets informatiques et monter en compétences vos équipes IT.",
-      "more": "En savoir plus ?"
+      "description": "Des experts du numérique, passionnés et engagés pour accompagner nos clients dans leur transformation digitale. Nous travaillons avec nos clients pour créer leurs solutions numériques qui sont à la fois innovantes, performantes et respectueuses de l'environnement. Rejoignez-nous dans notre aventure pour co-construire un avenir numérique durable.<br/>Nous intervenons à temps partiel pour maximiser le ROI de nos clients et suivant le Principe de Paret. <br/><br/>Nos valeurs principales que nous transmettons sur le terrain sont : simplicité, agilité, innovation, amélioration continue et esprit d'équipe",
+      "more": "Parlons-en"
     }
   }
 }

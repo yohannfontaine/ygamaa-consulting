@@ -104,8 +104,6 @@ onDeactivated(() => {
 }
 .navbar {
   padding: 0;
-  min-height: 10%;
-
   &.header-area {
     @media #{$desktop-device, $tablet-device, $large-mobile} {
       padding: 15px;
@@ -276,16 +274,19 @@ onDeactivated(() => {
   }
 }
 
-.menu-open #nav_collapse {
-  background-color: $white;
-  padding: 5px 20px;
-}
+@media #{$tablet-device, $large-mobile} {
+  .menu-open #nav_collapse {
+    background-color: $white;
+    padding: 5px 20px;
+  }
 
-.dark-mode .menu-open #nav_collapse {
-  background-color: $black;
+  .dark-mode .menu-open #nav_collapse {
+    background-color: $black;
+  }
 }
 
 #nav_collapse {
+  z-index: 1000;
   @media #{$desktop-device, $tablet-device, $large-mobile} {
     order: 3;
   }

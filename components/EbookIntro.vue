@@ -1,6 +1,6 @@
 <template>
   <div
-    class="ebook-feature section-space--pt_120 section-space--pb_60"
+    class="ebook-feature section-space--pt_120 section-space--pb_60 section"
     id="service"
   >
     <div class="container">
