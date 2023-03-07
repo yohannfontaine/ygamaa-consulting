@@ -40,6 +40,9 @@ export default defineNuxtConfig({
         legacy: false,
       }
     },
+    image: {
+      staticFilename: '[publicPath]/images/[name]-[hash][ext]'
+    },
     css: [
     'bootstrap/dist/css/bootstrap.css',
     '@fortawesome/fontawesome-svg-core/styles.css',

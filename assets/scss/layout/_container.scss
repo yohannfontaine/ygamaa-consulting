@@ -34,14 +34,6 @@
     }
 }
 
-.page-content-double-sidebar{
-    @media (min-width: 1200px){
-        .container {
-            max-width: 1600px;
-        }
-    }
-}
-
 @media (max-width: 1919px){
     .container-fluid{
         &--cp-60{

@@ -20,6 +20,10 @@ function handleScroll() {
   scrolled.value = window.scrollY > 50;
 }
 
+function toogle() {
+  setTimeout(() => (showMenu.value = !showMenu.value), 500);
+}
+
 onMounted(() => {
   handleScroll();
   window.addEventListener("scroll", handleScroll);
@@ -33,7 +37,7 @@ onDeactivated(() => {
 
 <template>
   <ClientOnly>
-    <b-navbar
+    <BNavbar
       type="dark"
       toggleable="lg"
       fixed="top"
@@ -44,51 +48,43 @@ onDeactivated(() => {
         'navbar-dark': $colorMode.value == 'dark',
       }"
     >
-      <b-navbar-brand class="navbar-brand" to="/"
+      <BNavbarBrand class="navbar-brand" to="/"
         ><nuxt-img
           format="webp"
           :src="'img/logo/logo-light.png'"
           alt="logo ygamma"
-      /></b-navbar-brand>
-      <b-navbar-toggle
+      /></BNavbarBrand>
+      <BNavbarToggle
         target="nav_collapse"
-        @click="showMenu = !showMenu"
-      ></b-navbar-toggle>
-      <b-collapse
-        class="default-nav justify-content-center"
+        :class="{ collapsed: showMenu }"
+        @click="toogle"
+      ></BNavbarToggle>
+      <Bcollapse
+        class="navbar-collapse collapse default-nav justify-content-center"
+        :class="{ show: showMenu }"
         is-nav
         id="nav_collapse"
-        v-show="showMenu"
       >
-        <b-navbar-nav class="navbar-nav main-menu">
-          <b-nav-item href="#home" class="scroll" @click="showMenu = !showMenu"
-            ><span>{{ $t("menu.home") }}</span></b-nav-item
+        <BNavbarNav class="navbar-nav main-menu">
+          <BNavItem href="#home" class="scroll" @click="toogle"
+            ><span>{{ $t("menu.home") }}</span></BNavItem
           >
-          <b-nav-item href="#about" class="scroll" @click="showMenu = !showMenu"
-            ><span>{{ $t("menu.about") }}</span></b-nav-item
+          <BNavItem href="#about" class="scroll" @cllick="toogle"
+            ><span>{{ $t("menu.about") }}</span></BNavItem
           >
-          <b-nav-item
-            href="#service"
-            class="scroll"
-            @click="showMenu = !showMenu"
-            ><span>{{ $t("menu.services") }}</span></b-nav-item
+          <BNavItem href="#service" class="scroll" @cllick="toogle"
+            ><span>{{ $t("menu.services") }}</span></BNavItem
           >
-          <b-nav-item
-            href="#partner"
-            class="scroll"
-            @click="showMenu = !showMenu"
-            ><span>{{ $t("menu.partners") }}</span></b-nav-item
+          <BNavItem href="#partner" class="scroll" @cllick="toogle"
+            ><span>{{ $t("menu.partners") }}</span></BNavItem
           >
-          <b-nav-item
-            href="#contact"
-            class="scroll"
-            @click="showMenu = !showMenu"
-            ><span>{{ $t("menu.contact") }}</span></b-nav-item
+          <BNavItem href="#contact" class="scroll" @cllick="toogle"
+            ><span>{{ $t("menu.contact") }}</span></BNavItem
           >
-        </b-navbar-nav>
+        </BNavbarNav>
         <DarkModeSwitcher></DarkModeSwitcher>
-      </b-collapse>
-    </b-navbar>
+      </Bcollapse>
+    </BNavbar>
   </ClientOnly>
 </template>
 
@@ -275,28 +271,27 @@ onDeactivated(() => {
 }
 
 @media #{$tablet-device, $large-mobile} {
-  .menu-open #nav_collapse {
+  #nav_collapse {
     background-color: $white;
     padding: 5px 20px;
+  }
+
+  .dark-mode #nav_collapse {
+    background-color: $black;
   }
 
   .menu-open .navbar-toggler {
     border-color: $theme-color--default;
   }
-
-  .dark-mode .menu-open #nav_collapse {
-    background-color: $black;
-  }
 }
 
 #nav_collapse {
-  z-index: 1000;
   @media #{$desktop-device, $tablet-device, $large-mobile} {
     order: 3;
   }
+  width: 100%;
 }
 .navbar-toggler {
-  z-index: 1000;
   @media #{$desktop-device, $tablet-device, $large-mobile} {
     order: 3;
   }

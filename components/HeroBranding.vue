@@ -12,9 +12,7 @@
             v-html="$t('branding.hero.description')"
           ></p>
           <div class="slider-button mt-30">
-            <a href="#contact" class="ht-btn ht-btn-md">{{
-              $t("branding.hero.more")
-            }}</a>
+            <a href="#contact" class="ht-btn">{{ $t("branding.hero.more") }}</a>
           </div>
         </div>
       </div>

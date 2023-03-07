@@ -27,7 +27,7 @@
                 <p class="hero-content-subtitle">
                   {{ $t("hero.slide1.subtitle") }}
                 </p>
-                <a href="#about" class="ht-btn ht-btn-md">
+                <a href="#about" class="ht-btn">
                   <span class="btn-icon ml-0 mr-2"
                     ><i class="fa fa-arrow-alt-to-bottom"></i
                   ></span>
@@ -53,7 +53,7 @@
                 <p class="hero-content-subtitle">
                   {{ $t("hero.slide2.subtitle") }}
                 </p>
-                <a href="#about" class="ht-btn ht-btn-md">
+                <a href="#about" class="ht-btn">
                   <span class="btn-icon ml-0 mr-2"
                     ><i class="fa fa-arrow-alt-to-bottom"></i></span
                   >{{ $t("hero.slide2.plus") }}
@@ -78,7 +78,7 @@
                 <p class="hero-content-subtitle">
                   {{ $t("hero.slide3.subtitle") }}
                 </p>
-                <a href="#about" class="ht-btn ht-btn-md">
+                <a href="#about" class="ht-btn">
                   <span class="btn-icon ml-0 mr-2"
                     ><i class="fa fa-arrow-alt-to-bottom"></i></span
                   >{{ $t("hero.slide3.plus") }}
