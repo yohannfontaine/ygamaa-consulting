@@ -25,7 +25,7 @@
           "alt": "Image d'un développeur derrière 2 écrans",
           "heading": "Développement Fullstack & DevSecOps",
           "subheading": "02",
-          "text": "Développement à la carte de votre site web, application mobile, API, etc. Développement frontend et/ou backend, préconisation et mise en place de votre pipeline d'intégration et déploiement continu (CI/CD) selon les best practices GitOps et indicateurs DORA. Mise en place de contrôle de qualité et bonnes pratiques de sécurité"
+          "text": "Développement à la carte de votre site web, application mobile, API, etc. Développement frontend et/ou backend, préconisation et mise en place de votre pipeline d'intégration et déploiement continu (CI/CD) ou Infra as Code (IaC) selon les best practices GitOps et indicateurs DORA. Mise en place de contrôle de qualité et bonnes pratiques de sécurité"
         },
         {
           "alt": "Image de 2 personnes devant un tableu kanban",
@@ -43,7 +43,7 @@
 
   "hero": {
     "slide1": {
-      "title": "Vous cherchez un accompagnement pour votre transformation digitale ?",
+      "title": "Vous cherchez un partenaire pour votre transformation digitale ?",
       "subtitle": "Notre équipe expérimentée peut vous accompagner dans la modernisation et l'amélioration des vos systèmes d'information et la mise en place d'une culture agile",
       "plus": "En savoir plus"
     },
@@ -54,7 +54,7 @@
     },
     "slide3": {
       "title": "Besoin d'expertise pour vos problèmes IT complexes ?",
-      "subtitle": "Notre passion associée à notre grande expérience et notre solide bagage académique nous permettent d'intervenir sur des missions à fortes valeurs ajoutés et dans la résolution de problèmes complexes",
+      "subtitle": "Notre passion associée à notre expérience de plus de 20 ans et notre solide bagage académique nous permettent d'intervenir sur des missions à fortes valeurs ajoutés et dans la résolution de problèmes complexes",
       "plus": "En savoir plus"
     }
   },

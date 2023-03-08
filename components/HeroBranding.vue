@@ -23,10 +23,12 @@
 <style lang="scss" scoped>
 /*---- hero branding start ----*/
 #about {
-  background-image: url("img/undraw_maker_launch.svg");
-  background-position: bottom 0px left 20px;
-  background-size: 48%;
-  background-repeat: no-repeat;
+  @media #{$laptop-device, $desktop-device, $tablet-device} {
+    background-image: url("img/undraw_maker_launch.svg");
+    background-position: bottom 0px left 20px;
+    background-size: 48%;
+    background-repeat: no-repeat;
+  }
 }
 
 .hero {
@@ -64,7 +66,7 @@
 }
 
 .slider-button {
-  align-self: end;
+  align-self: center;
 }
 /*---- hero branding end ----*/
 </style>

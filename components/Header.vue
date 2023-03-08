@@ -21,7 +21,8 @@ function handleScroll() {
 }
 
 function toogle() {
-  setTimeout(() => (showMenu.value = !showMenu.value), 500);
+  setTimeout(() => (showMenu.value = !showMenu.value), 400);
+  console.log("toogle :", showMenu.value);
 }
 
 onMounted(() => {
@@ -69,20 +70,20 @@ onDeactivated(() => {
           <BNavItem href="#home" class="scroll" @click="toogle"
             ><span>{{ $t("menu.home") }}</span></BNavItem
           >
-          <BNavItem href="#about" class="scroll" @cllick="toogle"
+          <BNavItem href="#about" class="scroll" @click="toogle"
             ><span>{{ $t("menu.about") }}</span></BNavItem
           >
-          <BNavItem href="#service" class="scroll" @cllick="toogle"
+          <BNavItem href="#service" class="scroll" @click="toogle"
             ><span>{{ $t("menu.services") }}</span></BNavItem
           >
-          <BNavItem href="#partner" class="scroll" @cllick="toogle"
+          <BNavItem href="#partner" class="scroll" @click="toogle"
             ><span>{{ $t("menu.partners") }}</span></BNavItem
           >
-          <BNavItem href="#contact" class="scroll" @cllick="toogle"
+          <BNavItem href="#contact" class="scroll" @click="toogle"
             ><span>{{ $t("menu.contact") }}</span></BNavItem
           >
         </BNavbarNav>
-        <DarkModeSwitcher></DarkModeSwitcher>
+        <DarkModeSwitcher @click="toogle"></DarkModeSwitcher>
       </Bcollapse>
     </BNavbar>
   </ClientOnly>
