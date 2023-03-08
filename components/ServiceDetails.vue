@@ -1,8 +1,22 @@
+<script setup>
+const services = [
+  {
+    icon: "img/icons/undraw_to_the_stars_re_wq2x.svg",
+  },
+  {
+    icon: "img/icons/undraw_programming_re_kg9v.svg",
+  },
+  {
+    icon: "img/icons/undraw_scrum_board_re_wk7v.svg",
+  },
+];
+</script>
+
 <template>
   <div class="row">
     <div
-      v-for="(ebook, index) in ebooks"
-      :key="ebook.id"
+      v-for="(service, index) in services"
+      :key="service.id"
       class="col-lg-4 col-md-6 wow move-up"
     >
       <div class="service-grid">
@@ -10,18 +24,18 @@
           <span>
             <div class="image mb-20">
               <img
-                :src="ebook.icon"
+                :src="service.icon"
                 class="img-fluid"
                 :alt="$t(`home.services.items[${index}].alt`)"
               />
             </div>
             <div class="content">
-              <h6 class="sub-heading">
+              <h3 class="sub-heading">
                 {{ $t(`home.services.items[${index}].subheading`) }}
-              </h6>
-              <h6 class="ht-heading mb-15">
+              </h3>
+              <h4 class="ht-heading mb-15">
                 {{ $t(`home.services.items[${index}].heading`) }}
-              </h6>
+              </h4>
               <div class="service_text">
                 {{ $t(`home.services.items[${index}].text`) }}
               </div>
@@ -33,23 +47,8 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: "EbookFeature",
-  data() {
-    return {
-      ebooks: [
-        {
-          icon: "img/icons/undraw_to_the_stars_re_wq2x.svg",
-        },
-        {
-          icon: "img/icons/undraw_programming_re_kg9v.svg",
-        },
-        {
-          icon: "img/icons/undraw_scrum_board_re_wk7v.svg",
-        },
-      ],
-    };
-  },
-};
-</script>
+<style>
+.ht-heading {
+  font-size: 18px;
+}
+</style>

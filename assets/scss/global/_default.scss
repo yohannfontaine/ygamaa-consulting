@@ -9,17 +9,19 @@
 *, *::after, *::before {
     box-sizing: border-box;
   }
-html, body {
+html {
     height: 100%;
 
     &.light-mode body{
         color-scheme: light;
         background-color: $body-bg-color;
+        color: $body-text-color;
     }
     
     &.dark-mode body{
         color-scheme: dark;
         background-color: $body-bg-color-dark;
+        color: $body-text-color-dark;
     }
     
 }
@@ -33,7 +35,7 @@ body{
   font-weight: $body-font-weight;
   visibility: visible;
   font-family: $font-family-name;
-  color: $body-text-color;
+
   position: relative;
 
 
@@ -257,8 +259,11 @@ ul {
     }
 }
 .section-sub-title{
-    color: #ee7455;
+    color: $theme-color-6;
     font-size: 14px;
+}
+.dark-mode .section-sub-title{
+    color: $odnoklassniki;
 }
 
 @-webkit-keyframes separator-bounce {

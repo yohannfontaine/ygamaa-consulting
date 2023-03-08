@@ -22,7 +22,7 @@ const title = computed(() =>
     <HeroBranding />
 
     <!-- Service section -->
-    <EbookIntro />
+    <ServiceIntro />
 
     <!-- Partners section -->
     <div class="brand-logo-area section" id="partner">

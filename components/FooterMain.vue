@@ -27,15 +27,16 @@ const socialLinks = [
                 <nuxt-img
                   src="/img/logo/logo-light.png"
                   class="logo-dark"
-                  alt="logo"
+                  alt="logo ygamaa"
                   height="100px"
                   format="webp"
                 />
                 <nuxt-img
                   src="/img/logo/logo-light.png"
                   class="img-fluid logo-light"
-                  alt="logo"
+                  alt="logo ygamaa"
                   format="webp"
+                  height="100px"
                 />
               </router-link>
             </div>

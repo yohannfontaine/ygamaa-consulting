@@ -58,7 +58,6 @@
       }
     }
     &-subtitle {
-      color: #696969;
       font-weight: 400;
       line-height: 1.8;
     }

@@ -31,9 +31,6 @@
         color: #6d70a6;
         margin-bottom: 15px;
     }
-    & .service_text{
-        color: $body-text-color;
-    }
 }
 
 .ht-service-box {
@@ -64,9 +61,6 @@
             color: $theme-color--default;
             margin-bottom: 15px;
         }
-        & .service_text{
-            color: $body-text-color;
-        } 
     }   
 }
     
@@ -94,11 +88,7 @@
             color: #333;
         }
     }
-    & .content-body {
-        & .service_text {
-            color: $body-text-color;
-        }
-    }
+
 }
 
 

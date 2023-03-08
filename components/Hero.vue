@@ -165,7 +165,6 @@
     }
   }
   &-content-subtitle {
-    color: #7e7e7e;
     font-weight: 400;
     padding-top: 15px;
     padding-bottom: 35px;
