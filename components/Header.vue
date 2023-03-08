@@ -52,7 +52,7 @@ onDeactivated(() => {
       <BNavbarBrand class="navbar-brand" to="/"
         ><nuxt-img
           format="webp"
-          src="img/logo/logo-light.png"
+          src="/img/logo/logo-light.png"
           alt="logo ygamaa"
       /></BNavbarBrand>
       <BNavbarToggle
