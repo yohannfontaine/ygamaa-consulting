@@ -4,11 +4,13 @@ const socialLinks = [
     name: "Linkedin",
     url: "https://www.linkedin.com/in/yohann-fontaine-a680331b/",
     icon: "linkedin-in",
+    label: "Voir le compte linkedin",
   },
   {
     name: "Github",
     url: "https://github.com/yohannfontaine",
     icon: "github",
+    label: "Voir le compte github",
   },
 ];
 </script>
@@ -80,7 +82,11 @@ const socialLinks = [
           <div class="col-md-6 text-center text-md-right">
             <ul class="list ht-social-networks solid-rounded-icon">
               <li v-for="link in socialLinks" :key="link.name" class="item">
-                <a :href="link.url" target="blank" class="social-link">
+                <a
+                  :href="link.url"
+                  class="social-link"
+                  :aria-label="link.label"
+                >
                   <font-awesome-icon :icon="['fab', link.icon]" />
                 </a>
               </li>
@@ -154,44 +160,6 @@ const socialLinks = [
   }
 }
 
-.app-landing_footer {
-  & .heading {
-    z-index: 2;
-    position: relative;
-  }
-
-  & .app-landing-background__links img {
-    border-radius: 5px;
-    margin-right: 10px;
-    // responsive
-    @media #{$small-mobile} {
-      margin-bottom: 5px;
-    }
-  }
-}
-
-.social-group__list {
-  & .ht-social-networks.tilte-style {
-    .link-text {
-      color: #cccccc;
-
-      &::before {
-        background: rgba(255, 255, 255, 0.2);
-      }
-
-      &:hover {
-        color: $white;
-      }
-    }
-
-    & .social-link {
-      &::before {
-        color: #ccc;
-      }
-    }
-  }
-}
-
 .copyright-text {
   display: inline-block;
 
@@ -200,54 +168,8 @@ const socialLinks = [
   }
 }
 
-.bg_drak-footer {
-  background: #242659;
-  border-top: 3px solid #5556ca;
-
-  & .footer-widget {
-    &__title {
-      color: $white;
-    }
-
-    &__list {
-      li {
-        color: rgba(255, 255, 255, 0.7);
-        margin-bottom: 10px;
-
-        &:last-child {
-          margin-bottom: 0;
-        }
-      }
-    }
-  }
-
-  & .copyright-text {
-    color: rgba(255, 255, 255, 0.7);
-  }
-
-  & .border-top {
-    border-top: 1px solid rgba(237, 237, 237, 0.1) !important;
-  }
-
-  & .ht-social-networks.solid-rounded-icon .social-link {
-    color: #fff;
-  }
-
-  & .tweet__text {
-    background-color: #fff;
-  }
-
-  & .tweet__heading {
-    color: #fff;
-  }
-}
-
 .app-landing_footer-share {
   margin-top: 30px;
-
-  & .ht-social-networks.large-icon .social-link {
-    color: $white;
-  }
 }
 
 .logo-light {
@@ -260,80 +182,6 @@ const socialLinks = [
   }
   .logo-dark {
     display: none;
-  }
-}
-
-.footer-widget-agency {
-  & .footer-widget {
-    &:nth-child(1) {
-      align-items: flex-end;
-      display: flex;
-
-      @media #{$tablet-device,$large-mobile} {
-        align-items: flex-start;
-      }
-    }
-
-    &:nth-child(2) {
-      padding-left: 25px;
-
-      @media #{$tablet-device,$large-mobile} {
-        padding-left: 15px;
-      }
-    }
-
-    &:nth-child(3) {
-      padding-left: 50px;
-
-      @media #{$tablet-device,$large-mobile} {
-        padding-left: 15px;
-      }
-    }
-  }
-}
-
-.ebook-footer {
-  & .horizontal-list ul li {
-    color: #6d70a6;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 8px;
-      left: -2px;
-      content: "";
-      height: 16px;
-      width: 1px;
-      background: #6d70a6;
-    }
-  }
-
-  & .ht-social-networks.tilte-style {
-    .link-text {
-      &::before {
-        background: rgba(89, 69, 230, 0.2);
-      }
-
-      &:hover {
-        color: $theme-color--default;
-
-        &::after {
-          background-color: rgba(89, 69, 230, 0.2);
-        }
-      }
-    }
-
-    & .social-link {
-      padding: 10px 14px;
-
-      &:hover {
-        & .link-text {
-          &::after {
-            background-color: $theme-color--default;
-          }
-        }
-      }
-    }
   }
 }
 
@@ -472,89 +320,4 @@ const socialLinks = [
     }
   }
 }
-
-/*=============================================
-=            twitter feed            =
-=============================================*/
-
-.tweet__text {
-  position: relative;
-  font-size: 14px;
-  border: 1px solid #ededed;
-  border-radius: 5px;
-  padding: 19px 20px 25px;
-  margin-bottom: 25px;
-  word-wrap: break-word;
-  background-color: rgba(89, 69, 230, 0.05);
-}
-
-.tweet__text a {
-  color: #38cb89;
-  display: block;
-}
-
-.tweet__text a:hover {
-  color: #5945e6;
-}
-
-.tweet__text:after {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-  left: 33px;
-  bottom: -10px;
-  border-color: transparent #f7fbfe transparent transparent;
-  border-width: 10px;
-}
-
-.tweet__text:before {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-  left: 30px;
-  bottom: -12px;
-  border-color: transparent #ededed transparent transparent;
-  border-width: 12px;
-}
-
-.tweet__info {
-  position: relative;
-  padding-left: 55px;
-}
-
-.tweet__info:before {
-  content: "\f099";
-  color: #5945e6;
-  display: block;
-  font-size: 18px;
-  line-height: 1;
-  position: absolute;
-  top: 0;
-  left: 23px;
-  font-family: "Font Awesome 5 Brands";
-}
-
-.tweet__heading {
-  font-size: 14px;
-  color: #333;
-}
-
-.tweet__date {
-  font-size: 14px;
-  color: #ababab;
-}
-
-/*=====  End of twitter feed  ======*/
 </style>
