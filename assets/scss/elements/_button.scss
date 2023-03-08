@@ -61,7 +61,7 @@
         font-size: 14px;
     }
 
-    @media #{$laptop-device, $desktop-device,$tablet-device} {
+    @media #{xlmax-device, $laptop-device, $desktop-device,$tablet-device} {
         font-size: 15px;
         font-weight: 500;
         letter-spacing: 0em;

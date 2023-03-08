@@ -21,8 +21,8 @@ function handleScroll() {
 }
 
 function toogle() {
-  setTimeout(() => (showMenu.value = !showMenu.value), 400);
-  console.log("toogle :", showMenu.value);
+  //fix issue with bootsrap
+  setTimeout(() => (showMenu.value = !showMenu.value), 300);
 }
 
 onMounted(() => {

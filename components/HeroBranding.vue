@@ -23,7 +23,7 @@
 <style lang="scss" scoped>
 /*---- hero branding start ----*/
 #about {
-  @media #{$laptop-device, $desktop-device, $tablet-device} {
+  @media #{xlmax-device, $laptop-device, $desktop-device, $tablet-device} {
     background-image: url("img/undraw_maker_launch.svg");
     background-position: bottom 0px left 20px;
     background-size: 48%;

@@ -6,7 +6,6 @@
 /*-- Google Font --*/
 @import url('https://fonts.googleapis.com/css?family=Rubik:300,300i,400,400i,500,500i,700,700i,900,900i');
 
-
 *, *::after, *::before {
     box-sizing: border-box;
   }
@@ -118,17 +117,6 @@ h6 {
     font-size: 18px;
 }
 
-.drak-area {
-    h1,h2,h3,h4,h5,h6 {
-        color: $white;
-    }
-    & .text {
-        color: #A69Ec2;
-    }
-    & .check-list .list-item {
-        color: $white;
-    }
-}
 p:last-child {
     margin-bottom: 0;
 }
@@ -272,43 +260,7 @@ ul {
     color: #ee7455;
     font-size: 14px;
 }
-.thin-short-line {
-    display: block;
-    height: 2px;
-    width: 120px;
-    background: #222;
-    margin: auto;
-}
-.thick-short-line {
-    display: block;
-    height: 4px;
-    width: 120px;
-    background: #222;
-    margin: auto;
-}
 
-.separator-wrap {
-    text-align: center;
-    display: inline-block;
-    margin-top: 40px;
-    & .dot {
-        border-radius: 50%;
-        box-shadow: 0 0 12px #def0ff;
-        background: #000;
-        background-color: $theme-color--default;
-        animation: separator-bounce 1.4s ease-in-out 0s infinite both;
-        width: 14px;
-        height: 14px;
-        &.second-circle {
-            margin-top: 18px;
-            animation-delay: -.16s;
-        }
-        &.third-circle {
-            margin-top: 14px;
-            animation-delay: -.32s;
-        }
-    }
-}
 @-webkit-keyframes separator-bounce {
     0%,
     80%,
@@ -521,35 +473,7 @@ ul {
     transition-timing-function: linear !important;
 }
 
-.single-element-wrap {
-    & ul {
-        & li {
-            margin-bottom: 15px;
-            &:last-child {
-                margin-bottom: 0;
-            }
-        }
-    }
-}
 
-.swiper-container-horizontal {
-    .swiper-pagination--vertical {
-        &.swiper-pagination-bullets {
-            bottom: auto;
-            left: auto;
-            right: 50px;
-            width: auto;
-            // responsive
-            @media #{$small-mobile}{
-                visibility: hidden;
-                opacity: 0;
-            }
-            .swiper-pagination-bullet {
-                margin-bottom: 10px;
-            }
-        }
-    }
-}
 
 /*=====  End of Default CSS  ======*/
 
