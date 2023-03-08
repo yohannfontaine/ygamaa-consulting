@@ -45,9 +45,11 @@ const socialLinks = [
                 }}
               </li>
               <li>
-                <a href="mailto:demo@example.com" class="hover-style-link">{{
-                  $t("footer.company.email")
-                }}</a>
+                <a
+                  href="mailto:yohann.fontaine@gmail.com"
+                  class="hover-style-link"
+                  >{{ $t("footer.company.email") }}</a
+                >
               </li>
               <li>
                 <a href="tel:0608462848" class="hover-style-link">{{
@@ -56,10 +58,9 @@ const socialLinks = [
               </li>
               <li>
                 <a
-                  href="https://ygamaa.io"
-                  target="_blank"
-                  class="hover-style-link hover-style-link--green"
-                  >ygamaa.io</a
+                  href="https://ygamaa-consulting.web.app"
+                  class="hover-style-link"
+                  >ygamaa-consulting.web.app</a
                 >
               </li>
             </ul>
@@ -73,7 +74,7 @@ const socialLinks = [
           <div class="col-md-6 text-center text-md-left">
             <span class="copyright-text">
               &copy; {{ new Date().getFullYear() }}
-              <a href="https://ygamaa.io/">Y-GAMAA Consulting</a>
+              <a href="https://ygamaa-consulting.web.app">Y-GAMAA Consulting</a>
               <br />Made by Yohann Fontaine with
               <font-awesome-icon :icon="['fas', 'heart']" class="text-danger" />
             </span>

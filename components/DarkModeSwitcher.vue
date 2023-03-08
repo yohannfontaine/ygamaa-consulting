@@ -2,8 +2,6 @@
 const colorModeValue = useColorMode();
 
 function toogleMode(colorMode) {
-  console.log("color mode value", colorMode.value);
-  console.log("color mode preference", colorMode.preference);
   if (colorMode.value === "dark") {
     colorMode.preference = "light";
     colorModeValue.value = "light";

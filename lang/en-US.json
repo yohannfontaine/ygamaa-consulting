@@ -1,61 +1,61 @@
 {
   "meta": {
     "title": "Y-GAMAA Consulting, your digital partner",
-    "description": "Y-GAMAA Consulting est une société qui propose une expertise dans l'accompagnement, l'architecture et le développement de produits numériques"
+    "description": "Y-GAMAA Consulting is a company that offers expertise in supporting, designing and developing digital products."
   },
   "menu": {
-    "home": "Accueil",
-    "about": "A propos",
+    "home": "Home",
+    "about": "About",
     "services": "Services",
-    "partners": "Expériences",
+    "partners": "Experiences",
     "contact": "Contact"
   },
   "home": {
     "services": {
-      "title": "Que proposons-nous ?",
-      "description": "Des services de qualité qui font la différence",
+      "title": "What do we offer?",
+      "description": "Quality services that make a difference",
       "items": [
         {
-          "alt": "Image d'une fusée au décollage",
-          "heading": "Audit & Optimisation",
+          "alt": "Image of a rocket taking off",
+          "heading": "Audit & Optimization",
           "subheading": "01",
-          "text": "Audit de votre architecture, préconisations d'optimisation selon votre contexte et implémentation d'architectures SI modernes et Cloud native. Patterns d'architecture : Architecture évènementielle (EDA), Architecture microservices, APIsation ...), AI, Low/No Code. Conseil en GreenIT, Ecoconception, Numérique responsable"
+          "text": "Audit of your architecture, optimization recommendations based on your context and implementation of modern SI and cloud-native architectures. Architecture patterns: Event-driven architecture (EDA), Microservices architecture, APIization ...), AI, Low/No Code. Advice on Green IT, Eco-design, Responsible digital technology."
         },
         {
-          "alt": "Image d'un développeur derrière 2 écrans",
-          "heading": "Développement Fullstack & DevSecOps",
+          "alt": "Image of a developer behind 2 screens",
+          "heading": "Fullstack Development & DevSecOps",
           "subheading": "02",
-          "text": "Développement à la carte de votre site web, application mobile, API, etc. Développement frontend et/ou backend, préconisation et mise en place de votre pipeline d'intégration et déploiement continu (CI/CD) selon les best practices GitOps et indicateurs DORA. Mise en place de contrôle de qualité et bonnes pratiques de sécurité"
+          "text": "Custom development of your website, mobile application, API, etc. Frontend and/or backend development, recommendation and implementation of your continuous integration and deployment (CI/CD) or Infrastructure as Code (IaC) pipeline according to GitOps best practices and DORA indicators. Implementation of quality control and security best practices."
         },
         {
-          "alt": "Image de 2 personnes devant un tableu kanban",
-          "heading": "Accompagnement Tech et/ou Lean & Agile",
+          "alt": "Image of 2 people in front of a kanban board",
+          "heading": "Tech and/or Lean & Agile Support",
           "subheading": "03",
-          "text": "Audit de l'organisation de vos équipes, mise en place méthodologie agile scrum/kanban en fonction du contexte, agilité à l'échelle SAFe. Accompagnement de startup dans le démarrage de leur équipe tech, CTO as a service"
+          "text": "Audit of your team's organization, implementation of agile scrum/kanban methodology according to the context, agility at the SAFe scale. Support for startups in launching their tech team, CTO as a service."
         }
       ]
     },
     "partners": {
-      "title": "Nos expériences",
-      "description": "20 ans d'expérience dans l'accompagnement, l'architecture, la conception et le développement de produits digitaux. Des mission réussies chez un grand nombre de clients renommés, dans différents secteurs d'activité : industrie, banque/assurance, retail, ESN, etc."
+      "title": "Our Experiences",
+      "description": "20 years of experience in supporting, designing, and developing digital products. Successful missions with many renowned clients in various sectors: industry, banking/insurance, retail, ESN, etc."
     }
   },
 
   "hero": {
     "slide1": {
-      "title": "Vous cherchez un accompagnement pour votre transformation digitale ?",
-      "subtitle": "Notre équipe expérimentée peut vous accompagner dans la modernisation et l'amélioration des vos systèmes d'information et la mise en place d'une culture agile",
-      "plus": "En savoir plus"
+      "title": "Looking for a partner for your digital transformation?",
+      "subtitle": "Our experienced team can assist you in modernizing and improving your information systems and implementing an agile culture.",
+      "plus": "Learn more"
     },
     "slide2": {
-      "title": "Vous souhaitez constuire un nouveau service numérique ?",
-      "subtitle": "Notre équipe de passionnés peut vous accompager depuis l'étude jusqu'à la maintenance en passant par le développement de votre produit numérique, site internet, application mobile, API...",
-      "plus": "En savoir plus"
+      "title": "Want to build a new digital service?",
+      "subtitle": "Our team of enthusiasts can support you from the study phase to maintenance, including the development of your digital product, website, mobile application, API...",
+      "plus": "Learn more"
     },
     "slide3": {
-      "title": "Besoin d'expertise pour vos problèmes IT complexes ?",
-      "subtitle": "Notre passion associée à notre grande expérience et notre solide bagage académique nous permettent d'intervenir sur des missions à fortes valeurs ajoutés et dans la résolution de problèmes complexes",
-      "plus": "En savoir plus"
+      "title": "Need expertise for your complex IT problems?",
+      "subtitle": "Our passion combined with our 20+ years of experience and solid academic background allows us to intervene in high-value-added missions and in solving complex problems.",
+      "plus": "Learn more"
     }
   },
   "footer": {
@@ -64,16 +64,16 @@
         "street": "89 chemin du Berck",
         "city": "62185 Saint-Tricat, France"
       },
-      "email": "contact{'@'}ygamaa.com",
+      "email": "yohann.fontaine{'@'}gmail.com",
       "phone": "06 08 46 28 48",
-      "website": "ygamaa.com"
+      "website": "ygamaa-consulting.web.app"
     }
   },
   "branding": {
     "hero": {
-      "title": "Qui sommes-nous ?",
-      "description": "Des experts du numérique, passionnés et engagés pour accompagner nos clients dans leur transformation digitale et travailler avec eux pour créer des solutions numériques à la fois innovantes, performantes et respectueuses de l'environnement. Les valeurs principales que nous essayons de transmettre sur le terrain sont : <strong>simplicité, agilité, innovation, amélioration continue et esprit d'équipe</strong>. Adeptes du Principe de Pareto, nous sommes convaincus que les bonnes actions ciblées permettent de générer le plus de valeurs pour nos clients.<br/><br/>Rejoignez-nous dans l'aventure pour co-construire un avenir numérique durable.",
-      "more": "Contactez nous !"
+      "title": "Who are we?",
+      "description": "We are digital experts, passionate and committed to accompanying our clients in their digital transformation and working with them to create digital solutions that are both innovative, high-performing, and environmentally friendly. The main values we try to convey on the field are: <strong>simplicity, agility, innovation, continuous improvement, and teamwork</strong>. As followers of the Pareto Principle, we are convinced that targeted good actions generate the most value for our clients. <br/> <br/>Join us in the adventure to co-build a sustainable digital future.",
+      "more": "Contact us!"
     }
   }
 }
