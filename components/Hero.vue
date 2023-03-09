@@ -167,7 +167,9 @@
   &-content-subtitle {
     font-weight: 400;
     padding-top: 15px;
-    padding-bottom: 35px;
+    @media #{$xlmax-device, $desktop-device} {
+      padding-bottom: 35px;
+    }
   }
   &-thumb {
     @media #{$xlmax-device} {

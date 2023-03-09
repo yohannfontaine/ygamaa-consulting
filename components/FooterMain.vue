@@ -29,14 +29,14 @@ const socialLinks = [
                   class="logo-dark"
                   alt="logo ygamaa"
                   format="webp"
-                  sizes="sm:200px md:220px lg:260px"
+                  sizes="sm:220px md:240px lg:260px"
                 />
                 <nuxt-img
                   src="img/logo/logo-light.png"
-                  class="img-fluid logo-light"
+                  class="logo-light"
                   alt="logo ygamaa"
                   format="webp"
-                  sizes="sm:200px md:220px lg:260px"
+                  sizes="sm:220px md:240px lg:260px"
                 />
               </router-link>
             </div>
@@ -109,7 +109,7 @@ const socialLinks = [
     width: 220px;
   }
   @media #{$tablet-device} {
-    width: 220px;
+    width: 240px;
   }
   @media #{$xlmax-device, $laptop-device, $desktop-device} {
     width: 260px;
