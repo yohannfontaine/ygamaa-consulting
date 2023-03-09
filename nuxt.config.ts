@@ -41,7 +41,7 @@ export default defineNuxtConfig({
       }
     },
     image: {
-      staticFilename: '[publicPath]/images/[name]-[hash][ext]'
+      staticFilename: '[name]-[hash][ext]'
     },
     css: [
     'bootstrap/dist/css/bootstrap.css',

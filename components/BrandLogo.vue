@@ -76,6 +76,7 @@ const brands = [
           :src="brand.logo"
           class="img-fluid"
           :alt="brand.alt"
+          sizes="md:125px lg:175px"
         />
       </div>
       <div class="brand-logo__image-hover">
@@ -84,6 +85,7 @@ const brands = [
           :src="brand.logoHover"
           class="img-fluid"
           :alt="brand.alt"
+          sizes="md:125px lg:175px"
         />
       </div>
     </div>

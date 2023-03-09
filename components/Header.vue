@@ -54,13 +54,14 @@ onDeactivated(() => {
           format="webp"
           src="img/logo/logo-light.png"
           alt="logo ygamaa"
+          sizes="sm:140px md:160px lg:200px"
       /></BNavbarBrand>
       <BNavbarToggle
         target="nav_collapse"
         :class="{ collapsed: showMenu }"
         @click="toogle"
       ></BNavbarToggle>
-      <Bcollapse
+      <BCollapse
         class="navbar-collapse collapse default-nav justify-content-center"
         :class="{ show: showMenu }"
         is-nav
@@ -84,7 +85,7 @@ onDeactivated(() => {
           >
         </BNavbarNav>
         <DarkModeSwitcher @click="toogle"></DarkModeSwitcher>
-      </Bcollapse>
+      </BCollapse>
     </BNavbar>
   </ClientOnly>
 </template>
@@ -93,11 +94,6 @@ onDeactivated(() => {
 // header section start
 .fixed-top {
   z-index: 9;
-}
-.navbar-brand {
-  img {
-    width: 180px;
-  }
 }
 .navbar {
   padding: 0;

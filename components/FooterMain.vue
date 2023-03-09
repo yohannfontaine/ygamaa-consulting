@@ -29,12 +29,14 @@ const socialLinks = [
                   class="logo-dark"
                   alt="logo ygamaa"
                   format="webp"
+                  sizes="sm:200px md:220px lg:260px"
                 />
                 <nuxt-img
                   src="img/logo/logo-light.png"
                   class="img-fluid logo-light"
                   alt="logo ygamaa"
                   format="webp"
+                  sizes="sm:200px md:220px lg:260px"
                 />
               </router-link>
             </div>
@@ -173,16 +175,10 @@ const socialLinks = [
 }
 
 .logo-light {
-  display: none;
-  width: 180px;
+  display: block;
 }
-.bg_drak-footer {
-  .logo-light {
-    display: block;
-  }
-  .logo-dark {
-    display: none;
-  }
+.logo-dark {
+  display: none;
 }
 
 .body-gradient {
