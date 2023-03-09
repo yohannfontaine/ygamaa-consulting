@@ -74,7 +74,6 @@ const brands = [
         <nuxt-img
           format="webp"
           :src="brand.logo"
-          class="img-fluid"
           :alt="brand.alt"
           sizes="md:125px lg:175px"
         />
@@ -83,7 +82,6 @@ const brands = [
         <nuxt-img
           format="webp"
           :src="brand.logoHover"
-          class="img-fluid"
           :alt="brand.alt"
           sizes="md:125px lg:175px"
         />
@@ -165,6 +163,16 @@ const brands = [
     margin-bottom: 0;
   }
 }
+
+.brand-logo img {
+  @media #{$small-mobile,$large-mobile,$tablet-device} {
+    width: 125px;
+  }
+  @media #{$desktop-device,$laptop-device,$xlmax-device} {
+    width: 175px;
+  }
+}
+
 .section-space--pb_60 {
   &.startup-carousel {
     @media #{$large-mobile} {

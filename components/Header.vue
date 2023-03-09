@@ -95,6 +95,17 @@ onDeactivated(() => {
 .fixed-top {
   z-index: 9;
 }
+.navbar-brand img {
+  @media #{$extra-small-mobile, $small-mobile, $large-mobile} {
+    width: 140px;
+  }
+  @media #{$tablet-device} {
+    width: 160px;
+  }
+  @media #{$xlmax-device, $laptop-device, $desktop-device} {
+    width: 200px;
+  }
+}
 .navbar {
   padding: 0;
   &.header-area {

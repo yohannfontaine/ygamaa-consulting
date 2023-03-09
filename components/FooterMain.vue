@@ -104,6 +104,17 @@ const socialLinks = [
 /*=============================================
 =            06. Footer Css           =
 =============================================*/
+.footer-widget__logo {
+  @media #{$extra-small-mobile, $small-mobile, $large-mobile} {
+    width: 220px;
+  }
+  @media #{$tablet-device} {
+    width: 220px;
+  }
+  @media #{$xlmax-device, $laptop-device, $desktop-device} {
+    width: 260px;
+  }
+}
 
 .footer-widget-wrapper {
   margin-bottom: -35px;
