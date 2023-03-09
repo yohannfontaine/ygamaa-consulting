@@ -29,14 +29,18 @@ const socialLinks = [
                   class="logo-dark"
                   alt="logo ygamaa"
                   format="webp"
-                  sizes="sm:220px md:240px lg:260px"
+                  sizes="xs:160 sm:220px lg:260px"
+                  width="160px"
+                  height="56px"
                 />
                 <nuxt-img
                   src="img/logo/logo-light.png"
                   class="logo-light"
                   alt="logo ygamaa"
                   format="webp"
-                  sizes="sm:220px md:240px lg:260px"
+                  sizes="xs:160 sm:220px lg:260px"
+                  width="160px"
+                  height="56px"
                 />
               </router-link>
             </div>
@@ -77,7 +81,9 @@ const socialLinks = [
             <span class="copyright-text">
               &copy; {{ new Date().getFullYear() }}
               <a href="https://ygamaa-consulting.web.app">Y-GAMAA Consulting</a>
-              <br />Made by Yohann Fontaine with
+              <br />Made by
+              <a href="https://github.com/yohannfontaine">Yohann Fontaine</a>
+              with
               <font-awesome-icon :icon="['fas', 'heart']" class="text-danger" />
             </span>
           </div>
@@ -104,15 +110,12 @@ const socialLinks = [
 /*=============================================
 =            06. Footer Css           =
 =============================================*/
-.footer-widget__logo {
-  @media #{$extra-small-mobile, $small-mobile, $large-mobile} {
+.footer-widget__logo img {
+  width: 260px;
+  height: 91px;
+  @media #{$large-mobile} {
     width: 220px;
-  }
-  @media #{$tablet-device} {
-    width: 240px;
-  }
-  @media #{$xlmax-device, $laptop-device, $desktop-device} {
-    width: 260px;
+    height: 77px;
   }
 }
 

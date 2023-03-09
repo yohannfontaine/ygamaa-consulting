@@ -76,6 +76,7 @@ const brands = [
           :src="brand.logo"
           :alt="brand.alt"
           sizes="md:125px lg:175px"
+          width="125"
         />
       </div>
       <div class="brand-logo__image-hover">
@@ -83,6 +84,7 @@ const brands = [
           format="webp"
           :src="brand.logoHover"
           :alt="brand.alt"
+          height="125"
           sizes="md:125px lg:175px"
         />
       </div>
@@ -143,7 +145,6 @@ const brands = [
     position: absolute;
     top: 0;
     left: 50%;
-    width: 100%;
   }
 
   &:hover {
@@ -165,10 +166,10 @@ const brands = [
 }
 
 .brand-logo img {
-  @media #{$small-mobile,$large-mobile,$tablet-device} {
+  @media #{$large-mobile} {
     width: 125px;
   }
-  @media #{$desktop-device,$laptop-device,$xlmax-device} {
+  @media #{$xlmax-device} {
     width: 175px;
   }
 }

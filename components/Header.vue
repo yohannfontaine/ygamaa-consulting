@@ -54,7 +54,9 @@ onDeactivated(() => {
           format="webp"
           src="img/logo/logo-light.png"
           alt="logo ygamaa"
-          sizes="sm:140px md:160px lg:200px"
+          sizes="sm:160px lg:220px"
+          width="160px"
+          height="56px"
       /></BNavbarBrand>
       <BNavbarToggle
         target="nav_collapse"
@@ -96,14 +98,11 @@ onDeactivated(() => {
   z-index: 9;
 }
 .navbar-brand img {
-  @media #{$extra-small-mobile, $small-mobile, $large-mobile} {
-    width: 140px;
-  }
-  @media #{$tablet-device} {
+  width: 220px;
+  height: 77px;
+  @media #{$large-mobile} {
     width: 160px;
-  }
-  @media #{$xlmax-device, $laptop-device, $desktop-device} {
-    width: 200px;
+    height: 56px;
   }
 }
 .navbar {
