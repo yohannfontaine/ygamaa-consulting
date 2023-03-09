@@ -4,11 +4,11 @@
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "headers": [
       {
-        "source": "**/*.@(js|css)",
+        "source": "**/*.@(js|css|svg|png|jpg)",
         "headers": [
           {
             "key": "Cache-Control",
-            "value": "max-age=2629743, public, immutable"
+            "value": "max-age=15778476, public, immutable"
           }
         ]
       }

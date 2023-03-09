@@ -84,7 +84,7 @@ const brands = [
           format="webp"
           :src="brand.logoHover"
           :alt="brand.alt"
-          height="125"
+          width="125"
           sizes="md:125px lg:175px"
         />
       </div>

@@ -49,15 +49,16 @@ onDeactivated(() => {
         'navbar-dark': $colorMode.value == 'dark',
       }"
     >
-      <BNavbarBrand class="navbar-brand" to="/"
-        ><nuxt-img
-          format="webp"
+      <BNavbarBrand class="navbar-brand" to="/">
+        <nuxt-img
           src="img/logo/logo-light.png"
           alt="logo ygamaa"
-          sizes="sm:160px lg:220px"
-          width="160px"
-          height="56px"
-      /></BNavbarBrand>
+          format="webp"
+          sizes="sm:150px lg:220px xl:260px"
+          width="150"
+          height="52"
+        />
+      </BNavbarBrand>
       <BNavbarToggle
         target="nav_collapse"
         :class="{ collapsed: showMenu }"
@@ -100,9 +101,9 @@ onDeactivated(() => {
 .navbar-brand img {
   width: 220px;
   height: 77px;
-  @media #{$large-mobile} {
-    width: 160px;
-    height: 56px;
+  @media #{$tablet-device,$large-mobile} {
+    width: 150px;
+    height: 52px;
   }
 }
 .navbar {

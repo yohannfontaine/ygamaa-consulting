@@ -27,20 +27,20 @@ const socialLinks = [
                 <nuxt-img
                   src="img/logo/logo-light.png"
                   class="logo-dark"
-                  alt="logo ygamaa"
+                  alt="logo ygamaa large"
                   format="webp"
-                  sizes="xs:160 sm:220px lg:260px"
-                  width="160px"
-                  height="56px"
+                  sizes="sm:150px lg:220px xl:260px"
+                  width="150"
+                  height="52"
                 />
                 <nuxt-img
                   src="img/logo/logo-light.png"
                   class="logo-light"
-                  alt="logo ygamaa"
+                  alt="logo ygamaa large"
                   format="webp"
-                  sizes="xs:160 sm:220px lg:260px"
-                  width="160px"
-                  height="56px"
+                  sizes="sm:150px lg:220px xl:260px"
+                  width="150"
+                  height="52"
                 />
               </router-link>
             </div>
@@ -112,8 +112,8 @@ const socialLinks = [
 =============================================*/
 .footer-widget__logo img {
   width: 260px;
-  height: 91px;
-  @media #{$large-mobile} {
+  height: 90px;
+  @media #{$tablet-device, $large-mobile} {
     width: 220px;
     height: 77px;
   }
