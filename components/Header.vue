@@ -87,7 +87,7 @@ onDeactivated(() => {
             ><span>{{ $t("menu.contact") }}</span></BNavItem
           >
         </BNavbarNav>
-        <DarkModeSwitcher @click="toogle"></DarkModeSwitcher>
+        <DarkModeSwitcher></DarkModeSwitcher>
       </BCollapse>
     </BNavbar>
   </ClientOnly>
@@ -101,7 +101,7 @@ onDeactivated(() => {
 .navbar-brand img {
   width: 220px;
   height: 77px;
-  @media #{$tablet-device,$large-mobile} {
+  @media #{$tablet-device, $large-mobile} {
     width: 150px;
     height: 52px;
   }

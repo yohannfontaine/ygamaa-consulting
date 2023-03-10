@@ -43,10 +43,7 @@
     margin-left: auto;
     // responsive
     @media #{$large-mobile} {
-      width: 380px;
-    }
-    @media #{$small-mobile} {
-      width: 100%;
+      width: 95%;
     }
     &-title {
       // responsive
