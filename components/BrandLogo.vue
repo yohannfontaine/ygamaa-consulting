@@ -166,11 +166,9 @@ const brands = [
 }
 
 .brand-logo img {
+  width: 175px;
   @media #{$large-mobile} {
     width: 125px;
-  }
-  @media #{$xlmax-device} {
-    width: 175px;
   }
 }
 
