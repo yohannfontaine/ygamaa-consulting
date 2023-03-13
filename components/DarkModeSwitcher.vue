@@ -20,6 +20,7 @@ function toogleMode(colorMode) {
       type="button"
       role="switch"
       aria-label="Toggle dark mode"
+      :aria-checked="$colorMode.value == 'dark'"
       @click="toogleMode($colorMode)"
     >
       <span class="vt-switch-check"
