@@ -6,9 +6,9 @@
 - [Getting Started](#getting_started)
 - [Deployment](#deployment)
 - [Built Using](#built_using)
-- [Todo](../TODO.md)
-- [Contributing](../CONTRIBUTING.md)
-- [Code of conduct](../CODE_OF_CONDUCT.md)
+- [Todo](TODO.md)
+- [Contributing](CONTRIBUTING.md)
+- [Code of conduct](CODE_OF_CONDUCT.md)
 - [Authors](#authors)
 
 ## 🧐 About <a name = "about"></a>
@@ -93,14 +93,14 @@ The website is avaible at https://ygamaa-consulting.web.app
 - [Vue 3](https://vuejs.org) - The progressive javascript framework
 - [Nuxt 3](https://nuxt.com) - amazing web framework based on Vue
 - [Bootstrap](https://bootstrap-vue.github.io/bootstrap-vue-next/) : the famous components library
-- [Firebase](https://firebase.google.com) : to host static 
+- [Firebase](https://firebase.google.com) : to host this static site for free
 
 
 ## ✍️ Contributing <a name = "contributing"></a>
 
 The project is available in open source. All contributions are welcome, and the goal is to incrementally enrich it over the time.
 
- Please read the [contribution instructions](../CONTRIBUTING.md) and the [code of conduct](../CODE_OF_CONDUCT.md)
+ Please read the [contribution instructions](CONTRIBUTING.md) and the [code of conduct](CODE_OF_CONDUCT.md)
 
 ---
 
