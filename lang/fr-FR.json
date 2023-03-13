@@ -19,7 +19,7 @@
           "alt": "Image d'une fusée au décollage",
           "heading": "Audit & Optimisation",
           "subheading": "01",
-          "text": "Audit de votre architecture, préconisations d'optimisation selon votre contexte et implémentation d'architectures SI modernes et Cloud native. Patterns d'architecture : Architecture évènementielle (EDA), Architecture microservices, APIsation ...), AI, Low/No Code. Conseil en GreenIT, Ecoconception, Numérique responsable"
+          "text": "Audit de votre architecture, préconisations d'optimisation selon votre contexte et implémentation d'architectures SI modernes et Cloud native. Patterns d'architecture : Architecture évènementielle (EDA), Architecture microservices, APIsation, Serverless, DataMesh ...), AI, Low/No Code. Conseil en GreenIT, Ecoconception, Numérique responsable"
         },
         {
           "alt": "Image d'un développeur derrière 2 écrans",
@@ -31,13 +31,13 @@
           "alt": "Image de 2 personnes devant un tableu kanban",
           "heading": "Accompagnement Tech et/ou Lean & Agile",
           "subheading": "03",
-          "text": "Audit de l'organisation de vos équipes, mise en place méthodologie agile scrum/kanban en fonction du contexte, agilité à l'échelle SAFe. Accompagnement de startup dans le démarrage de leur équipe tech, CTO as a service"
+          "text": "Audit de l'organisation de vos équipes, mise en place méthodologie agile scrum/kanban en fonction du contexte, agilité à l'échelle SAFe. Accompagnement de startup dans le recrutement et démarrage de leur équipe tech, CTO as a service"
         }
       ]
     },
     "partners": {
       "title": "Nos expériences",
-      "description": "20 ans d'expérience dans l'accompagnement, l'architecture, la conception et le développement de produits digitaux. Des mission réussies chez un grand nombre de clients renommés, dans différents secteurs d'activité : industrie, banque/assurance, retail, ESN, etc."
+      "description": "20 ans d'expérience dans l'accompagnement, le pilotage, l'architecture et le développement de produits digitaux. Des missions réussies chez un grand nombre de clients renommés, dans différents secteurs d'activité : industrie, banque/assurance, retail, ESN, etc."
     }
   },
 
