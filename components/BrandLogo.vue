@@ -4,61 +4,85 @@ const brands = [
     logo: "img/partners/logo-bpifrance.png",
     logoHover: "img/partners/logo-bpifrance.png",
     alt: "partner bpifrance logo",
+    height: 47,
+    width: 175,
   },
   {
     logo: "img/partners/logo-ca.png",
     logoHover: "img/partners/logo-ca.png",
     alt: "partner crédtit agricole logo",
+    height: 98,
+    width: 175,
   },
   {
-    logo: "img/partners/logo-coface.jpg",
-    logoHover: "img/partners/logo-coface.jpg",
+    logo: "img/partners/logo-coface.png",
+    logoHover: "img/partners/logo-coface.png",
     alt: "partner coface logo",
+    height: 74,
+    width: 175,
   },
   {
     logo: "img/partners/logo-franfinance.png",
     logoHover: "img/partners/logo-franfinance.png",
     alt: "partner franfinance logo",
+    height: 28,
+    width: 175,
   },
   {
     logo: "img/partners/logo-ibm.png",
     logoHover: "img/partners/logo-ibm.png",
     alt: "partner IBM logo",
+    height: 175,
+    width: 175,
   },
   {
     logo: "img/partners/logo-promod.png",
     logoHover: "img/partners/logo-promod.png",
     alt: "partner promod logo",
+    height: 92,
+    width: 175,
   },
   {
     logo: "img/partners/logo-renault.png",
     logoHover: "img/partners/logo-renault.png",
     alt: "partner renault logo",
+    height: 66,
+    width: 175,
   },
   {
     logo: "img/partners/logo-renault-digital.png",
     logoHover: "img/partners/logo-renault-digital.png",
     alt: "partner renault digital logo",
+    height: 101,
+    width: 175,
   },
   {
     logo: "img/partners/logo-sncf.jpg",
     logoHover: "img/partners/logo-sncf.jpg",
     alt: "partner sncf logo",
+    height: 91,
+    width: 175,
   },
   {
     logo: "img/partners/logo-keolis-lille.jpg",
     logoHover: "img/partners/logo-keolis-lille.jpg",
     alt: "partner keolis logo",
+    height: 175,
+    width: 175,
   },
   {
     logo: "img/partners/logo-soprasteria.png",
     logoHover: "img/partners/logo-soprasteria.png",
     alt: "partner soprasteria logo",
+    height: 24,
+    width: 175,
   },
   {
     logo: "img/partners/logo-softeam.jpeg",
     logoHover: "img/partners/logo-softeam.jpeg",
     alt: "partner softeam logo",
+    height: 175,
+    width: 175,
   },
 ];
 </script>
@@ -76,7 +100,8 @@ const brands = [
           :src="brand.logo"
           :alt="brand.alt"
           sizes="md:125px lg:175px"
-          width="125"
+          :height="brand.height"
+          :width="brand.width"
         />
       </div>
       <div class="brand-logo__image-hover">
@@ -84,7 +109,8 @@ const brands = [
           format="webp"
           :src="brand.logoHover"
           :alt="brand.alt"
-          width="125"
+          :height="brand.height"
+          :width="brand.width"
           sizes="md:125px lg:175px"
         />
       </div>
@@ -167,6 +193,7 @@ const brands = [
 
 .brand-logo img {
   width: 175px;
+  height: auto;
   @media #{$large-mobile} {
     width: 125px;
   }

@@ -29,8 +29,8 @@ const socialLinks = [
                   alt="logo ygamaa large"
                   format="webp"
                   sizes="sm:150px lg:220px xl:260px"
-                  width="150"
-                  height="52"
+                  width="260"
+                  height="90"
                 />
               </router-link>
             </div>
