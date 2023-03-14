@@ -8,9 +8,9 @@ const socialLinks = [
   },
   {
     name: "Github",
-    url: "https://github.com/yohannfontaine",
+    url: "https://github.com/yohannfontaine/ygamaa-consulting",
     icon: "github",
-    label: "Voir le compte github",
+    label: "Voir le repository github",
   },
 ];
 </script>
@@ -26,16 +26,6 @@ const socialLinks = [
               <router-link to="/">
                 <nuxt-img
                   src="img/logo/logo-light.png"
-                  class="logo-dark"
-                  alt="logo ygamaa large"
-                  format="webp"
-                  sizes="sm:150px lg:220px xl:260px"
-                  width="150"
-                  height="52"
-                />
-                <nuxt-img
-                  src="img/logo/logo-light.png"
-                  class="logo-light"
                   alt="logo ygamaa large"
                   format="webp"
                   sizes="sm:150px lg:220px xl:260px"
@@ -115,7 +105,7 @@ const socialLinks = [
   height: 90px;
   @media #{$tablet-device, $large-mobile} {
     width: 220px;
-    height: 77px;
+    height: 76px;
   }
 }
 

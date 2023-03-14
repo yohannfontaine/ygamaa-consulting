@@ -100,7 +100,7 @@ onDeactivated(() => {
 }
 .navbar-brand img {
   width: 220px;
-  height: 77px;
+  height: 76px;
   @media #{$tablet-device, $large-mobile} {
     width: 150px;
     height: 52px;
