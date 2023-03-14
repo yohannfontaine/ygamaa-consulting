@@ -40,6 +40,9 @@
                   class="img-fluid"
                   alt="hero thumb"
                   format="webp"
+                  height="702"
+                  width="752"
+                  sizes="sm:360vw md:600vw lg:700vw xl:752vw"
                 />
               </div>
             </div>
@@ -65,6 +68,9 @@
                   class="img-fluid"
                   alt="hero thumb"
                   format="webp"
+                  height="700"
+                  width="982"
+                  sizes="sm:360vw md:600vw lg:700vw xl:982vw"
                 />
               </div>
             </div>
@@ -90,6 +96,9 @@
                   class="img-fluid"
                   alt="hero thumb"
                   format="webp"
+                  height="679"
+                  width="715"
+                  sizes="sm:360vw md:600vw lg:700vw xl:715vw"
                 />
               </div>
             </div>
