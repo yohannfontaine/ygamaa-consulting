@@ -2,7 +2,7 @@
 const socialLinks = [
   {
     name: "Linkedin",
-    url: "https://www.linkedin.com/in/yohann-fontaine-a680331b/",
+    url: "https://www.linkedin.com/company/y-gamaa-consulting/",
     icon: "linkedin-in",
     label: "Voir le compte linkedin",
   },
