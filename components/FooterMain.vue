@@ -132,50 +132,12 @@ const socialLinks = [
   }
 }
 
-.app-showcase_footer {
-  & .heading {
-    font-size: 48px;
-    line-height: 1.34;
-    font-weight: 300;
-    margin-bottom: 15px;
-
-    @media #{$large-mobile} {
-      font-size: 32px;
-    }
-  }
-
-  & .sub-title {
-    line-height: 1.78;
-    font-weight: 400;
-  }
-
-  & .showcase-background__links {
-    a {
-      @media #{$extra-small-mobile} {
-        display: block;
-      }
-    }
-    img {
-      border-radius: 5px;
-      margin-right: 10px;
-      @media #{$extra-small-mobile} {
-        margin-right: 0px;
-        margin-bottom: 5px;
-      }
-    }
-  }
-}
-
 .copyright-text {
   display: inline-block;
 
   @media #{$large-mobile} {
     margin-bottom: 15px;
   }
-}
-
-.app-landing_footer-share {
-  margin-top: 30px;
 }
 
 .logo-light {
@@ -254,69 +216,6 @@ const socialLinks = [
       font-size: 16px;
       min-width: 16px;
       margin-right: 10px;
-    }
-  }
-  &.tilte-style {
-    & .social-link {
-      position: relative;
-      &::before {
-        content: "-";
-        position: absolute;
-        top: 50%;
-        left: -5px;
-        transform: translateY(-50%);
-        color: #333;
-      }
-
-      &:hover {
-        & .link-text {
-          &::after {
-            background-color: #38cb89;
-            width: 100%;
-            left: 0;
-          }
-        }
-      }
-    }
-    & .item {
-      &:first-child {
-        & .social-link {
-          &::before {
-            display: none;
-          }
-        }
-      }
-    }
-    & .link-text {
-      font-size: 14px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      font-weight: 500;
-      color: #333;
-      position: relative;
-      padding: 5px 0;
-      z-index: 1;
-      &::before {
-        content: "";
-        height: 2px;
-        bottom: 0;
-        position: absolute;
-        left: 0;
-        right: 0;
-        z-index: -2;
-        background: rgba(0, 0, 0, 0.2);
-      }
-      &::after {
-        content: "";
-        height: 2px;
-        width: 0;
-        bottom: 0;
-        position: absolute;
-        left: auto;
-        right: 0;
-        z-index: -1;
-        transition: width 0.6s cubic-bezier(0.25, 0.8, 0.25, 1) 0s;
-      }
     }
   }
 }

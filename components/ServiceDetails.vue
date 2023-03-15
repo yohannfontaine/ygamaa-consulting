@@ -2,12 +2,18 @@
 const services = [
   {
     icon: "img/icons/undraw_to_the_stars_re_wq2x.svg",
+    height: 321,
+    width: 396,
   },
   {
     icon: "img/icons/undraw_programming_re_kg9v.svg",
+    height: 288,
+    width: 396,
   },
   {
     icon: "img/icons/undraw_scrum_board_re_wk7v.svg",
+    height: 279,
+    width: 396,
   },
 ];
 </script>
@@ -23,10 +29,13 @@ const services = [
         <div class="ht-service-box--two text-center">
           <span>
             <div class="image mb-20">
-              <img
+              <nuxt-img
                 :src="service.icon"
                 class="img-fluid"
                 :alt="$t(`home.services.items[${index}].alt`)"
+                :height="service.height"
+                :width="service.width"
+                sizes="sm:396vw md:256vw lg:216vw xl:296vw"
               />
             </div>
             <div class="content">

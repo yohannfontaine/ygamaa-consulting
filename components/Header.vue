@@ -225,26 +225,6 @@ onDeactivated(() => {
 }
 
 .header-area {
-  &.text-white {
-    .logo-dark {
-      display: none;
-    }
-    .logo-light {
-      display: block;
-    }
-    &.is-sticky {
-      &.text-white {
-        .logo-dark {
-          display: block;
-        }
-        .logo-light {
-          display: none;
-        }
-      }
-    }
-  }
-}
-.header-area {
   &.is-sticky {
     animation: 0.95s ease-in-out 0s normal none 1 running fadeInDown;
     z-index: 999;
