@@ -64,7 +64,7 @@
               </div>
               <div class="hero-thumb">
                 <nuxt-img
-                  src="/img/hero/software-thumb-2.png"
+                  src="/img/hero/software-thumb-2-20230319.png"
                   class="img-fluid"
                   alt="hero thumb"
                   format="webp"
