@@ -4,6 +4,7 @@ export default defineNuxtConfig({
       '@nuxtjs/i18n',
       '@nuxtjs/color-mode',
       '@nuxt/image-edge',
+      '@nuxtjs/fontaine',
       'bootstrap-vue-next/nuxt',
       'nuxt-swiper',
     ],
