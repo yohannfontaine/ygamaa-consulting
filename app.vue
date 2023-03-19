@@ -14,7 +14,7 @@ const title = computed(() =>
 <template>
   <NuxtLayout>
     <!-- Navbar section -->
-    <Header />
+    <HeaderSection />
     <!-- Hero section -->
     <Hero />
 
@@ -44,7 +44,7 @@ const title = computed(() =>
       </div>
     </div>
     <!-- Footer section -->
-    <FooterMain />
+    <FooterSection />
   </NuxtLayout>
 </template>
 
