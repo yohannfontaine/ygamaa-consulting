@@ -18,7 +18,7 @@ const title = computed(() =>
     <!-- Hero section -->
     <Hero />
     <!-- About section -->
-    <HeroBranding />
+    <AboutSection />
     <!-- Service section -->
     <ServiceSection />
     <!-- Partners section -->
