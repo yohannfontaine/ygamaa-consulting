@@ -28,6 +28,7 @@ const head = useLocaleHead({
             :content="meta.content"
           />
         </template>
+        <Link rel="preconnect" href="https://fonts.gstatic.com" />
       </Head>
       <Body>
         <slot />
