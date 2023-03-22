@@ -13,10 +13,6 @@ const head = useLocaleHead({
       <Head>
         <Title>{{ t("meta.title") }}</Title>
         <Meta name="description" :content="t('meta.description')" />
-        <Meta
-          http-equiv="Content-Security-Policy"
-          content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; object-src 'none'; base-uri 'self'; connect-src 'self' ws:; font-src 'self' data: https://fonts.gstatic.com; frame-src 'self'; img-src 'self' data:; manifest-src 'self'; media-src 'self'; worker-src 'none';"
-        />
         <template v-for="link in head.link" :key="link.id">
           <Link
             :id="link.id"
