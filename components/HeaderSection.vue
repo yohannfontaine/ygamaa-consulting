@@ -71,19 +71,19 @@ onDeactivated(() => {
         id="nav_collapse"
       >
         <BNavbarNav class="navbar-nav main-menu">
-          <BNavItem href="#home" class="scroll" @click="toogle"
+          <BNavItem href="/#home" class="scroll" @click="toogle"
             ><span>{{ $t("menu.home") }}</span></BNavItem
           >
-          <BNavItem href="#about" class="scroll" @click="toogle"
+          <BNavItem href="/#about" class="scroll" @click="toogle"
             ><span>{{ $t("menu.about") }}</span></BNavItem
           >
-          <BNavItem href="#service" class="scroll" @click="toogle"
+          <BNavItem href="/#service" class="scroll" @click="toogle"
             ><span>{{ $t("menu.services") }}</span></BNavItem
           >
-          <BNavItem href="#partner" class="scroll" @click="toogle"
+          <BNavItem href="/#partner" class="scroll" @click="toogle"
             ><span>{{ $t("menu.partners") }}</span></BNavItem
           >
-          <BNavItem href="#contact" class="scroll" @click="toogle"
+          <BNavItem href="/#contact" class="scroll" @click="toogle"
             ><span>{{ $t("menu.contact") }}</span></BNavItem
           >
         </BNavbarNav>

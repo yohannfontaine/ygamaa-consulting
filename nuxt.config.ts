@@ -5,6 +5,7 @@ export default defineNuxtConfig({
       '@nuxtjs/color-mode',
       '@nuxt/image-edge',
       '@nuxtjs/fontaine',
+      '@nuxt/content',
       'bootstrap-vue-next/nuxt',
       'nuxt-swiper',
     ],
@@ -46,9 +47,6 @@ export default defineNuxtConfig({
     '@fortawesome/fontawesome-svg-core/styles.css',
     'animate.css/animate.min.css',
     "@/assets/scss/style.scss"],
-    app: {
-      pageTransition: { name: 'page', mode: 'out-in' }
-    },
     vite: {
         css: {
           preprocessorOptions: {

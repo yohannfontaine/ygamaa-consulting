@@ -67,7 +67,7 @@ const socialLinks = [
     <div class="footer-copyright-area border-top section-space--ptb_30">
       <div class="container">
         <div class="row align-items-center">
-          <div class="col-md-6 text-center text-md-left">
+          <div class="col-md-3 text-center text-md-left">
             <span class="copyright-text">
               &copy; {{ new Date().getFullYear() }}
               <a href="https://ygamaa-consulting.web.app">Y-GAMAA Consulting</a>
@@ -77,7 +77,12 @@ const socialLinks = [
               <font-awesome-icon :icon="['fas', 'heart']" class="text-danger" />
             </span>
           </div>
-          <div class="col-md-6 text-center text-md-right">
+          <div class="col-md-3 text-center text-md-right">
+            <nuxt-link :to="localePath('/legal')">{{
+              $t("footer.legal")
+            }}</nuxt-link>
+          </div>
+          <div class="col-md-3 text-center text-md-right">
             <ul class="list ht-social-networks solid-rounded-icon">
               <li v-for="link in socialLinks" :key="link.name" class="item">
                 <a
