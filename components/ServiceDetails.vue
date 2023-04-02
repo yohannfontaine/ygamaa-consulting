@@ -35,6 +35,7 @@ const services = [
                 :alt="$t(`home.services.items[${index}].alt`)"
                 :height="service.height"
                 :width="service.width"
+                loading="lazy"
                 sizes="sm:396vw md:256vw lg:216vw xl:296vw"
               />
             </div>

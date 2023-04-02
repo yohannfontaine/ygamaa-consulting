@@ -102,6 +102,7 @@ const brands = [
           sizes="md:125px lg:175px"
           :height="brand.height"
           :width="brand.width"
+          loading="lazy"
         />
       </div>
       <div class="brand-logo__image-hover">
@@ -111,6 +112,7 @@ const brands = [
           :alt="brand.alt"
           :height="brand.height"
           :width="brand.width"
+          loading="lazy"
           sizes="md:125px lg:175px"
         />
       </div>
