@@ -22,7 +22,7 @@
     "@fortawesome/free-regular-svg-icons": "^6.4.0",
     "@fortawesome/free-solid-svg-icons": "^6.4.0",
     "@fortawesome/vue-fontawesome": "^3.0.3",
-    "@nuxtjs/fontaine": "^0.2.4",
+    "@nuxtjs/fontaine": "^0.3.0",
     "@nuxtjs/i18n": "^8.0.0-beta.10",
     "animate.css": "^4.1.1",
     "nuxt-swiper": "^1.1.0",
