@@ -37,10 +37,10 @@ export default defineNuxtConfig({
       lazy: true,
       langDir: 'lang',
       defaultLocale: 'fr',
-      // add `vueI18n` option to `@nuxtjs/i18n` module options
-      vueI18n: {
-        legacy: false,
-      }
+      precompile: {
+        strictMessage: false,
+      },
+      vueI18n: './i18n.config.ts'
     },
     css: [
     'bootstrap/dist/css/bootstrap.css',
