@@ -39,7 +39,6 @@ onDeactivated(() => {
 <template>
   <ClientOnly>
     <BNavbar
-      type="dark"
       toggleable="lg"
       fixed="top"
       class="header-area"
@@ -286,5 +285,9 @@ onDeactivated(() => {
   &:focus {
     box-shadow: 0 0 0 0;
   }
+}
+
+.light-mode .nav-link span {
+  color: $theme-color--black;
 }
 </style>
