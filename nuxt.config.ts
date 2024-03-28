@@ -6,7 +6,7 @@ export default defineNuxtConfig({
       '@nuxt/image-edge',
       '@nuxtjs/fontaine',
       '@nuxt/content',
-      'bootstrap-vue-next/nuxt',
+      '@bootstrap-vue-next/nuxt',
       'nuxt-swiper',
     ],
     colorMode: {
@@ -37,7 +37,7 @@ export default defineNuxtConfig({
       lazy: true,
       langDir: 'lang',
       defaultLocale: 'fr',
-      precompile: {
+      compilation: {
         strictMessage: false,
       },
       vueI18n: './i18n.config.ts'
