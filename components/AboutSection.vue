@@ -23,7 +23,7 @@
 <style lang="scss" scoped>
 /*---- hero branding start ----*/
 #about {
-  background-image: url("img/undraw_maker_launch.svg");
+  background-image: url("/img/undraw_maker_launch.svg");
   background-position: bottom 0px left 20px;
   background-size: 48%;
   background-repeat: no-repeat;

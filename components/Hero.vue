@@ -206,7 +206,7 @@
   .swiper-slide {
     background-color: $white;
     background-repeat: no-repeat;
-    background-image: url("img/hero/software-shape.png");
+    background-image: url("/img/hero/software-shape.png");
     &-active {
       .hero-thumb {
         img {
