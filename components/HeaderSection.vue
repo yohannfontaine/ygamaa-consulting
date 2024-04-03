@@ -257,6 +257,15 @@ onDeactivated(() => {
   }
 }
 
+@media #{$small-mobile, $large-mobile} {
+  .dark-mode .header-area {
+    background-color: $black;
+  }
+  .light-mode .header-area {
+    background-color: $white;
+  }
+}
+
 @media #{$tablet-device, $large-mobile} {
   #nav_collapse {
     background-color: $white;
@@ -281,6 +290,9 @@ onDeactivated(() => {
 .navbar-toggler {
   @media #{$desktop-device, $tablet-device, $large-mobile} {
     order: 3;
+  }
+  @media #{$small-mobile} {
+    margin-top: 15px;
   }
   &:focus {
     box-shadow: 0 0 0 0;
