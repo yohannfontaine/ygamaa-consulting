@@ -34,32 +34,6 @@ const socialLinks = [
                 />
               </router-link>
             </div>
-            <ul class="footer-widget__list">
-              <li>
-                {{ $t("footer.company.address.street") }}<br />{{
-                  $t("footer.company.address.city")
-                }}
-              </li>
-              <li>
-                <a
-                  href="mailto:yohann.fontaine@gmail.com"
-                  class="hover-style-link"
-                  >{{ $t("footer.company.email") }}</a
-                >
-              </li>
-              <li>
-                <a href="tel:0608462848" class="hover-style-link">{{
-                  $t("footer.company.phone")
-                }}</a>
-              </li>
-              <li>
-                <a
-                  href="https://ygamaa-consulting.web.app"
-                  class="hover-style-link"
-                  >ygamaa-consulting.web.app</a
-                >
-              </li>
-            </ul>
           </div>
         </div>
       </div>
