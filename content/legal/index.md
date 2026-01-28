@@ -2,17 +2,11 @@
 
 ## Informations sur l'entreprise
 
-Raison sociale : Y-GAMAA CONSULTING  
-Adresse : 89 chemin du Berck 62185 Saint-Tricat  
-Téléphone : 06 08 46 28 48  
-Email : yohann.fontaine@gmail.com  
+Raison sociale : Y-GAMAA CONSULTING - CLOSED
 
 ## Responsable de la publication
 
-Nom : Yohann Fontaine  
-Adresse : 89 chemin du Berck 62185 Saint-Tricat  
-Téléphone : 06 08 46 28 48  
-Email : yohann.fontaine@gmail.com    
+Nom : Yohann Fontaine    
 
 ## Hébergement
 

@@ -2,17 +2,11 @@
 
 ## Company Information
 
-Company Name: Y-GAMAA CONSULTING  
-Address: 89 chemin du Berck 62185 Saint-Tricat  
-Phone: 06 08 46 28 48  
-Email: yohann.fontaine@gmail.com  
+Company Name: Y-GAMAA CONSULTING - CLOSED
 
 ## Publication Manager
 
-Name: Yohann Fontaine  
-Address: 89 chemin du Berck 62185 Saint-Tricat  
-Phone: 06 08 46 28 48  
-Email: yohann.fontaine@gmail.com  
+Name: Yohann Fontaine
 
 ## Hosting
 
