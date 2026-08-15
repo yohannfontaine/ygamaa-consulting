@@ -8,3 +8,15 @@ node_modules
 dist
 
 .history
+.DS_Store
+
+
+.agents/
+.claude/
+.devcontainer/
+skills-lock.json
+
+# Fichiers de travail locaux
+docs/
+tasks/
+TODO.md

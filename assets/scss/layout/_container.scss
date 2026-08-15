@@ -1,97 +1,32 @@
-
 /*=============================================
-=            container            =
+=            Conteneur                        =
 =============================================*/
 
-.container-fluid{
-    &--cp-150{
-        @media (min-width: 1600px){
-            padding: 0 150px !important;
-        }
-        @media (min-width: 1600px) and (max-width: 1664px){
-            padding: 0 110px !important;
-        }
-        @media (min-width: 1200px){
-            padding: 0 50px;
-        }
-    }
-    &--cp-120{
-        @media (min-width: 1600px){
-            padding: 0 120px !important;
-        }
-        @media (min-width: 1600px) and (max-width: 1664px){
-            padding: 0 110px !important;
-        }
-        @media (min-width: 1200px){
-            padding: 0 50px;
-        }
-    }
-    &--cp-30{
-        padding: 0 30px;
-        @media #{$large-mobile}{
-            padding: 0 15px;
-        }
-    }
+/* Bootstrap n'est plus chargé : ces deux règles sont les seules qu'on lui
+   empruntait encore. Conteneur fluide plafonné plutôt que les paliers
+   successifs de Bootstrap — toutes les sections sont en grid ou flex. */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: $space-4;
 }
 
-@media (max-width: 1919px){
-    .container-fluid{
-        &--cp-60{
-            padding: 0 30px;
-        }
-        &--cp-80{
-            padding: 0 40px;
-            @media #{$large-mobile}{
-                padding: 0 30px;
-            }
-
-            @media #{$small-mobile}{
-                padding: 0 15px;
-            }
-        }
-    }
+@media (min-width: 768px) {
+  .container {
+    padding-inline: $space-5;
+  }
 }
 
-
-@media (min-width: 1200px){
-    .container {
-        max-width: 1200px;
-    }
+/* Visible des lecteurs d'écran, invisible à l'œil. */
+.visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
 }
-
-
-.container_fl {
-    padding-left: 15px;
-    padding-right: 15px;
-}
-.col-06__left {
-    width: 600px;
-    max-width: 100%;
-    float: right;
-    @media #{$tablet-device,$large-mobile}{
-        float: none;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 40px;
-    }
-}
-.col-06__right {
-    width: 600px;
-    max-width: 100%;
-    float: left;
-    @media #{$tablet-device,$large-mobile}{
-        float: none;
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-.banner-image__content {
-    width: 570px;
-    max-width: 100%;
-}
-
-
-
-
-/*=====  End of container  ======*/
-

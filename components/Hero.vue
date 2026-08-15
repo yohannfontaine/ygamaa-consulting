@@ -1,278 +1,137 @@
-<script setup>
+<script setup lang="ts">
+import type { Audience } from '~/data/usecases'
+import { useAudience } from '~/composables/useAudience'
+
+const audience = useAudience()
+const options: Audience[] = ['particulier', 'entreprise']
+
+// Les deux portes restent de vrais liens : sans JS elles mènent quand même au
+// générateur. Le clic ne fait qu'y présélectionner l'audience.
+function choose(value: Audience) {
+  audience.value = value
+}
 </script>
 
 <template>
-  <div class="hero-software hero-swiper-btn" id="home">
-    <div class="container_f1">
-      <div class="swiper-wrapper">
-        <Swiper
-          :modules="[SwiperAutoplay, SwiperEffectFade, SwiperNavigation]"
-          :loop="true"
-          :effect="'fade'"
-          :autoplay="{
-            delay: 9000,
-            disableOnInteraction: true,
-          }"
-          :navigation="{
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-          }"
+  <section id="home" class="hero">
+    <div class="container hero__inner">
+      <p class="hero__eyebrow">{{ $t('hero.eyebrow') }}</p>
+
+      <h1 class="hero__title">{{ $t('hero.title') }}</h1>
+
+      <p class="hero__lead">{{ $t('hero.lead') }}</p>
+
+      <p id="hero-fork-label" class="hero__fork-label">
+        {{ $t('hero.fork.label') }}
+      </p>
+      <nav class="hero__fork" aria-labelledby="hero-fork-label">
+        <a
+          v-for="option in options"
+          :key="option"
+          class="hero__door"
+          href="#generator"
+          @click="choose(option)"
         >
-          <SwiperSlide>
-            <div class="hero-item">
-              <div class="hero-content">
-                <h2 class="h1 hero-content-title">
-                  {{ $t("hero.slide1.title") }}
-                </h2>
-                <p class="hero-content-subtitle">
-                  {{ $t("hero.slide1.subtitle") }}
-                </p>
-                <a href="#about" class="ht-btn">
-                  <span class="btn-icon ml-0 mr-2"
-                    ><i class="fa fa-arrow-alt-to-bottom"></i
-                  ></span>
-                  {{ $t("hero.slide1.plus") }}
-                </a>
-              </div>
-              <div class="hero-thumb pr-100">
-                <nuxt-img
-                  src="/img/hero/software-thumb-1.png"
-                  class="img-fluid"
-                  alt="hero thumb"
-                  format="webp"
-                  height="702"
-                  width="752"
-                  sizes="sm:360vw md:600vw lg:700vw xl:752vw"
-                />
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div class="hero-item">
-              <div class="hero-content">
-                <h2 class="h1 hero-content-title">
-                  {{ $t("hero.slide2.title") }}
-                </h2>
-                <p class="hero-content-subtitle">
-                  {{ $t("hero.slide2.subtitle") }}
-                </p>
-                <a href="#about" class="ht-btn">
-                  <span class="btn-icon ml-0 mr-2"
-                    ><i class="fa fa-arrow-alt-to-bottom"></i></span
-                  >{{ $t("hero.slide2.plus") }}
-                </a>
-              </div>
-              <div class="hero-thumb">
-                <nuxt-img
-                  src="/img/hero/software-thumb-2-20230319.png"
-                  class="img-fluid"
-                  alt="hero thumb"
-                  format="webp"
-                  height="700"
-                  width="982"
-                  sizes="sm:360vw md:600vw lg:700vw xl:982vw"
-                />
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div class="hero-item">
-              <div class="hero-content">
-                <h2 class="h1 hero-content-title">
-                  {{ $t("hero.slide3.title") }}
-                </h2>
-                <p class="hero-content-subtitle">
-                  {{ $t("hero.slide3.subtitle") }}
-                </p>
-                <a href="#about" class="ht-btn">
-                  <span class="btn-icon ml-0 mr-2"
-                    ><i class="fa fa-arrow-alt-to-bottom"></i></span
-                  >{{ $t("hero.slide3.plus") }}
-                </a>
-              </div>
-              <div class="hero-thumb pr-100">
-                <nuxt-img
-                  src="/img/hero/software-thumb-3.png"
-                  class="img-fluid"
-                  alt="hero thumb"
-                  format="webp"
-                  height="679"
-                  width="715"
-                  sizes="sm:360vw md:600vw lg:700vw xl:715vw"
-                />
-              </div>
-            </div>
-          </SwiperSlide>
-          <!-- Optional controls -->
-          <div class="swiper-button-prev swiper-button-white"></div>
-          <div class="swiper-button-next swiper-button-white"></div>
-        </Swiper>
-      </div>
+          {{ $t(`hero.fork.${option}`) }}
+        </a>
+      </nav>
     </div>
-  </div>
+  </section>
 </template>
 
 <style lang="scss" scoped>
-/*---- hero software style start ----*/
-.swiper-slide {
-  @media #{$large-mobile} {
-    padding-top: 25px;
-  }
-}
 .hero {
-  &-item {
-    height: 970px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-top: 100px;
-    // responsive
-    @media #{$xlmax-device,$desktop-device} {
-      height: 700px;
-    }
-    @media #{$tablet-device, $large-mobile} {
-      flex-direction: column;
-      justify-content: start;
-      padding-top: 0;
-    }
-    @media #{$extra-small-mobile} {
-      height: 780px;
-    }
+  // Un dégradé sombre de bout en bout : le blanc posé dessus reste ≥ 7:1,
+  // donc lisible sans exception.
+  background: $gradient--default-two;
+  padding-block: $space-10 $space-9;
+}
+
+.hero__inner {
+  max-width: 52rem;
+}
+
+.hero__eyebrow {
+  margin-bottom: $space-4;
+  font-size: $fs-sm;
+  font-weight: $fw-semibold;
+  letter-spacing: $eyebrow-letter-spacing;
+  text-transform: uppercase;
+  color: $c-accent-300;
+}
+
+.hero__title {
+  margin-bottom: $space-5;
+  color: $white;
+}
+
+.hero__lead {
+  margin-bottom: $space-7;
+  max-width: 40rem;
+  font-size: $fs-lg;
+  color: $c-neutral-200;
+}
+
+.hero__fork-label {
+  margin-bottom: $space-3;
+  font-size: $fs-sm;
+  font-weight: $fw-semibold;
+  letter-spacing: $eyebrow-letter-spacing;
+  text-transform: uppercase;
+  color: $c-neutral-300;
+}
+
+.hero__fork {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-4;
+}
+
+// Les deux portes ont le même poids visuel : c'est un aiguillage, pas un
+// couple action principale / secondaire.
+.hero__door {
+  padding: $space-3 $space-6;
+  border: 1px solid $c-accent-400;
+  border-radius: $radius-pill;
+  font-size: $fs-base;
+  font-weight: $fw-semibold;
+  color: $c-neutral-950;
+  background: $c-accent-400;
+  text-decoration: none;
+  transition: $transition-fast;
+}
+
+.hero__door + .hero__door {
+  color: $c-accent-300;
+  background: transparent;
+  border-color: $c-accent-300;
+}
+
+.hero__door:hover {
+  background: $c-accent-300;
+  border-color: $c-accent-300;
+  color: $c-neutral-950;
+}
+
+.hero__door:focus-visible {
+  outline: $focus-ring-width solid $c-accent-300;
+  outline-offset: 3px;
+}
+
+@media (max-width: 767px) {
+  .hero {
+    padding-block: $space-8 $space-7;
   }
-  &-content {
-    width: 490px;
-    padding-left: 330px;
-    box-sizing: content-box;
-    // responsive
-    @media #{$xlmax-device,$desktop-device} {
-      width: 650px;
-      padding-left: 90px;
-    }
-    @media #{$tablet-device, $large-mobile} {
-      width: 470px;
-      text-align: center;
-      padding-left: 0;
-      margin: 100px auto 0;
-    }
-    @media #{$small-mobile} {
-      width: 100%;
-      margin: 100px auto 0;
-    }
-  }
-  &-content-title {
-    font-weight: 500;
-    line-height: 1.3;
-    // responsive
-    @media #{$xlmax-device} {
-      font-size: 50px;
-    }
-    @media #{$desktop-device} {
-      font-size: 42px;
-    }
-    @media #{$extra-small-mobile} {
-      font-size: 24px;
-    }
-  }
-  &-content-subtitle {
-    font-weight: 400;
-    padding-top: 15px;
-    @media #{$xlmax-device, $desktop-device} {
-      padding-bottom: 35px;
-    }
-  }
-  &-thumb {
-    @media #{$xlmax-device} {
-      width: 700px;
-    }
-    &.pr-100 {
-      padding-right: 100px;
-      // responsive
-      @media #{$tablet-device, $large-mobile} {
-        width: 450px;
-        margin: 0 auto;
-        padding-right: 0;
-        padding-top: 50px;
-      }
-      @media #{$small-mobile} {
-        width: 100%;
-        padding: 50px 15px 0;
-      }
-    }
+
+  .hero__door {
+    flex: 1 1 100%;
+    text-align: center;
   }
 }
 
-// slider text animation
-.hero-software {
-  .swiper-slide {
-    background-color: $white;
-    background-repeat: no-repeat;
-    background-image: url("/img/hero/software-shape.png");
-    &-active {
-      .hero-thumb {
-        img {
-          animation-fill-mode: both;
-          animation-duration: 1s;
-          animation-name: fadeInRight;
-          animation-delay: 0.5s;
-        }
-      }
-
-      .hero-content {
-        animation-fill-mode: both;
-        animation-duration: 1s;
-        animation-name: fadeInLeft;
-        animation-delay: 0.5s;
-      }
-    }
+@media (prefers-reduced-motion: reduce) {
+  .hero__door {
+    transition: none;
   }
 }
-
-.dark-mode .hero-software {
-  .swiper-slide {
-    background-color: $black;
-    background-image: none;
-  }
-}
-
-/*---- hero software style end ----*/
-
-/*----- hero swiper slider button start -----*/
-
-.swiper-button-prev,
-.swiper-button-next {
-  font-size: 25px;
-  color: #fff;
-  min-width: 70px;
-  min-height: 70px;
-  display: block;
-  text-align: center;
-  line-height: 70px;
-  border-radius: 50%;
-  background-color: rgba(0, 0, 0, 0.1);
-  background-size: 12px;
-  transition: 0.4s;
-  opacity: 0;
-  visibility: hidden;
-  // responsive
-  @media #{$large-mobile} {
-    min-width: 45px;
-    min-height: 45px;
-    line-height: 45px;
-    background-size: 10px;
-  }
-  &:hover {
-    background-color: rgba(0, 0, 0, 0.6);
-  }
-}
-.swiper {
-  &:hover {
-    .swiper-button-prev,
-    .swiper-button-next {
-      opacity: 1;
-      visibility: visible;
-    }
-  }
-}
-
-/*----- hero swiper slider button end -----*/
 </style>

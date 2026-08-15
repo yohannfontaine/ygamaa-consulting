@@ -1,0 +1,93 @@
+/*=============================================
+=      00. Tokens sémantiques (clair/sombre)   =
+=============================================*/
+
+/*
+  Les composants consomment ces custom properties, jamais la palette brute :
+
+      color: var(--yg-text);
+      background: var(--yg-surface);
+
+  Le mode sombre est alors gratuit — aucun override `.dark-mode` à écrire
+  dans chaque composant. Les valeurs brutes vivent dans `_variabls.scss`.
+
+  Contrastes vérifiés en AA sur les paires prévues (texte/fond, accent/fond).
+  Seul `--yg-accent-vivid` est décoratif : ne jamais y poser d'information
+  seule (texte, icône signifiante, bordure d'un champ en erreur…).
+*/
+
+:root {
+  color-scheme: light;
+
+  // Fonds
+  --yg-bg: #{$c-neutral-0};
+  --yg-surface: #{$c-neutral-0};
+  --yg-surface-sunken: #{$c-neutral-50};
+  --yg-surface-raised: #{$c-neutral-0};
+  --yg-surface-inverse: #{$c-neutral-950};
+
+  // Texte
+  --yg-text: #{$c-neutral-700};
+  --yg-text-heading: #{$c-neutral-900};
+  --yg-text-muted: #{$c-neutral-500};
+  --yg-text-inverse: #{$c-neutral-50};
+
+  // Accent
+  --yg-accent: #{$c-accent-700};        // surfaces pleines (boutons)
+  --yg-accent-hover: #{$c-accent-800};
+  --yg-accent-text: #{$c-accent-700};   // accent lisible en texte courant
+  --yg-accent-vivid: #{$c-accent-500};  // décoratif uniquement
+  --yg-accent-soft: #{rgba($c-accent-600, 0.08)}; // fond teinté léger
+  --yg-on-accent: #{$c-neutral-0};
+
+  // Bordures & séparateurs
+  --yg-border: #{$c-neutral-200};
+  --yg-border-strong: #{$c-neutral-300};
+
+  // États
+  --yg-success: #{$c-success};
+  --yg-warning: #{$c-warning};
+  --yg-danger: #{$c-danger};
+
+  // Focus & ombres
+  --yg-focus: #{$c-accent-700};
+  --yg-shadow-sm: #{$shadow-sm};
+  --yg-shadow-md: #{$shadow-md};
+  --yg-shadow-lg: #{$shadow-lg};
+}
+
+.dark-mode {
+  color-scheme: dark;
+
+  --yg-bg: #{$c-neutral-950};
+  --yg-surface: #{$c-neutral-900};
+  --yg-surface-sunken: #{$c-neutral-950};
+  --yg-surface-raised: #{$c-neutral-800};
+  --yg-surface-inverse: #{$c-neutral-50};
+
+  --yg-text: #{$c-neutral-300};
+  --yg-text-heading: #{$c-neutral-50};
+  --yg-text-muted: #{$c-neutral-400};
+  --yg-text-inverse: #{$c-neutral-900};
+
+  --yg-accent: #{$c-accent-400};
+  --yg-accent-hover: #{$c-accent-300};
+  --yg-accent-text: #{$c-accent-400};
+  --yg-accent-vivid: #{$c-accent-300};
+  --yg-accent-soft: #{rgba($c-accent-400, 0.12)};
+  --yg-on-accent: #{$c-neutral-950};
+
+  --yg-border: #{$c-neutral-800};
+  --yg-border-strong: #{$c-neutral-700};
+
+  --yg-success: #{$c-success-dark};
+  --yg-warning: #{$c-warning-dark};
+  --yg-danger: #{$c-danger-dark};
+
+  --yg-focus: #{$c-accent-400};
+  --yg-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.5);
+  --yg-shadow-md: 0 4px 16px rgba(0, 0, 0, 0.55);
+  --yg-shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.6);
+}
+
+/*=====  End of Tokens  ======*/
