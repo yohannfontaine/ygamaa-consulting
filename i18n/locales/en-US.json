@@ -1,4 +1,9 @@
 {
+  "brand": {
+    "name": "Y-GaMaa",
+    "descriptor": "AI training & guidance",
+    "home": "Y-GaMaa, back to home"
+  },
   "meta": {
     "title": "Y-GaMaa — Practical AI for businesses and individuals in Calais",
     "description": "Training, use-case discovery and AI implementation for businesses and individuals in Calais and its region. Twenty years in tech, no jargon."

@@ -31,15 +31,16 @@ function anchor(section: string) {
 <template>
   <header class="site-header">
     <div class="container site-header__inner">
-      <NuxtLink class="site-header__brand" :to="localePath('/')">
-        <nuxt-img
-          src="img/logo/logo-light.png"
-          alt="Y-GaMaa Consulting"
-          format="webp"
-          sizes="sm:150px lg:200px"
-          width="200"
-          height="69"
-        />
+      <!-- Deux cadrages plutôt qu'un logo mis à l'échelle : sous ~40px de
+           haut le phare s'empâte. Le SVG suit le thème par ses tokens, ce que
+           l'ancien PNG ne savait pas faire. -->
+      <NuxtLink
+        class="site-header__brand"
+        :to="localePath('/')"
+        :aria-label="$t('brand.home')"
+      >
+        <BrandLogo class="site-header__logo site-header__logo--large" variante="reduit" />
+        <BrandLogo class="site-header__logo site-header__logo--small" variante="mobile" />
       </NuxtLink>
 
       <button
@@ -106,10 +107,19 @@ function anchor(section: string) {
   padding-block: $space-3;
 }
 
-.site-header__brand img {
-  display: block;
-  width: 200px;
-  height: auto;
+.site-header__brand {
+  display: flex;
+}
+
+// Les deux cadrages n'ont pas le même rapport : on les cale sur la hauteur,
+// la largeur suit.
+.site-header__logo--large {
+  height: 44px;
+}
+
+.site-header__logo--small {
+  display: none;
+  height: 21px;
 }
 
 .site-header__toggle {
@@ -195,8 +205,12 @@ function anchor(section: string) {
     gap: $space-4;
   }
 
-  .site-header__brand img {
-    width: 150px;
+  .site-header__logo--large {
+    display: none;
+  }
+
+  .site-header__logo--small {
+    display: inline-flex;
   }
 }
 </style>

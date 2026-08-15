@@ -1,4 +1,9 @@
 {
+  "brand": {
+    "name": "Y-GaMaa",
+    "descriptor": "Formation & pilotage IA",
+    "home": "Y-GaMaa, retour à l'accueil"
+  },
   "meta": {
     "title": "Y-GaMaa — L'IA concrète pour les pros et les particuliers de Calais",
     "description": "Formation, recherche de cas d'usage et implémentation de l'IA pour les entreprises et les particuliers de Calais et sa région. Vingt ans dans le numérique, sans jargon."

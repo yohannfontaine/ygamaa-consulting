@@ -1,5 +1,16 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+    app: {
+      head: {
+        link: [
+          // Le SVG porte sa propre bascule clair/sombre ; les navigateurs qui
+          // ne le lisent pas retombent sur le PNG, en version claire.
+          { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
+          { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32.png' },
+          { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
+        ],
+      },
+    },
     modules: [
       '@nuxtjs/i18n',
       '@nuxtjs/color-mode',
