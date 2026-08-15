@@ -3,11 +3,9 @@ export default defineNuxtConfig({
     modules: [
       '@nuxtjs/i18n',
       '@nuxtjs/color-mode',
-      '@nuxt/image-edge',
+      '@nuxt/image',
       '@nuxtjs/fontaine',
       '@nuxt/content',
-      '@bootstrap-vue-next/nuxt',
-      'nuxt-swiper',
     ],
     colorMode: {
       preference: 'system', // default value of $colorMode.preference
@@ -22,30 +20,30 @@ export default defineNuxtConfig({
       locales: [
         {
           code: 'en',
-          iso: 'en-US',
+          language: 'en-US',
           name: 'EN',
           file: 'en-US.json'
         },
         {
           code: 'fr',
-          iso: 'fr-FR',
+          language: 'fr-FR',
           name: 'FR',
           file: 'fr-FR.json'
         }
       ],
       baseUrl: 'https://ygamaa-consulting.web.app',
-      lazy: true,
-      langDir: 'lang',
+      langDir: 'locales',
       defaultLocale: 'fr',
       compilation: {
         strictMessage: false,
       },
-      vueI18n: './i18n.config.ts'
+      vueI18n: 'i18n.config.ts'
     },
     css: [
-    'bootstrap/dist/css/bootstrap.css',
-    '@fortawesome/fontawesome-svg-core/styles.css',
-    'animate.css/animate.min.css',
+    // Polices auto-hébergées (woff2 bundlés par Vite) : zéro requête externe,
+    // ce qui permet de garder font-src 'self' dans la CSP.
+    '@fontsource-variable/inter',
+    '@fontsource-variable/space-grotesk',
     "@/assets/scss/style.scss"],
     vite: {
         css: {
@@ -55,8 +53,5 @@ export default defineNuxtConfig({
             }
           }
         }
-      },
-      image: {
-        staticFilename: '[publicPath]/images/[name]-[hash][ext]'
-    }
+      }
 })

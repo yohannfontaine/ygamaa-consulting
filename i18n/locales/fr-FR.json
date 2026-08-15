@@ -1,0 +1,142 @@
+{
+  "meta": {
+    "title": "Y-GaMaa — L'IA concrète pour les pros et les particuliers de Calais",
+    "description": "Formation, recherche de cas d'usage et implémentation de l'IA pour les entreprises et les particuliers de Calais et sa région. Vingt ans dans le numérique, sans jargon."
+  },
+  "menu": {
+    "label": "Navigation principale",
+    "open": "Menu",
+    "close": "Fermer",
+    "home": "Accueil",
+    "generator": "Cas d'usage",
+    "offer": "L'offre",
+    "why": "Pourquoi moi",
+    "contact": "Contact"
+  },
+  "hero": {
+    "eyebrow": "Calais et sa région",
+    "title": "L'IA, concrètement, pour les pros et les particuliers",
+    "lead": "Vingt ans dans le numérique. Je forme, j'identifie les cas d'usage qui comptent vraiment, et j'implémente. Sans jargon et sans promesse en l'air.",
+    "fork": {
+      "label": "Par où commencer ?",
+      "particulier": "Je suis un particulier",
+      "entreprise": "Je suis une entreprise"
+    }
+  },
+  "footer": {
+    "legal": "Mentions légales",
+    "social": {
+      "linkedin": "Voir le compte LinkedIn",
+      "github": "Voir le dépôt GitHub"
+    }
+  },
+  "generator": {
+    "eyebrow": "Générateur de cas d'usage",
+    "title": "Ce que l'IA peut faire pour vous, concrètement",
+    "subtitle": "Dites-moi qui vous êtes, je vous montre des usages réels — pas de la théorie.",
+    "audience": {
+      "legend": "Vous êtes",
+      "particulier": "Un particulier",
+      "entreprise": "Une entreprise"
+    },
+    "sector": {
+      "label": "Votre secteur",
+      "placeholder": "Choisissez un secteur…"
+    },
+    "empty": "Choisissez votre secteur pour voir les cas d'usage correspondants.",
+    "count": "Aucun cas d'usage | 1 cas d'usage affiché | {count} cas d'usage affichés",
+    "gain": "Gain :",
+    "tiers": {
+      "formation": "Formation",
+      "conseil": "Cas d'usage",
+      "implementation": "Implémentation"
+    }
+  },
+  "offer": {
+    "eyebrow": "L'offre",
+    "title": "Trois étages, dans l'ordre où ça marche",
+    "subtitle": "On peut entrer par n'importe lequel. Le plus souvent, on les enchaîne.",
+    "more": "En savoir plus",
+    "tiers": {
+      "formation": {
+        "name": "Former",
+        "pitch": "Vous et vos équipes, autonomes sur l'IA en quelques séances — sur vos vrais dossiers, pas sur des exemples de démonstration."
+      },
+      "conseil": {
+        "name": "Trouver les cas d'usage",
+        "pitch": "Un diagnostic court qui sépare ce qui rapporte de ce qui fait joli en réunion, chiffrage à l'appui."
+      },
+      "implementation": {
+        "name": "Implémenter",
+        "pitch": "De l'idée validée à l'outil qui tourne, branché sur vos données et vos processus existants."
+      }
+    },
+    "detail": {
+      "covers": "Ce que ça couvre",
+      "cta": "En parler de vive voix",
+      "back": "Revenir aux trois étages",
+      "formation": {
+        "title": "Former vos équipes à l'IA",
+        "lead": "Une formation qui part de votre métier, pas d'un catalogue. On travaille sur vos documents, vos mails, vos processus — et vous repartez avec des réflexes, pas des notes.",
+        "points": [
+          "Séances en petit groupe ou en tête-à-tête, sur site ou à distance.",
+          "Prise en main des assistants du marché : ce qu'ils savent faire, et surtout ce qu'ils ne savent pas.",
+          "Rédaction d'instructions efficaces, vérification des réponses, repérage des erreurs plausibles.",
+          "Cadre de confidentialité : quelles données peuvent sortir, lesquelles ne doivent jamais sortir."
+        ]
+      },
+      "conseil": {
+        "title": "Trouver les cas d'usage qui comptent",
+        "lead": "L'IA peut tout faire, donc elle ne fait rien de précis. Le travail consiste à choisir : quelques usages à fort retour, écartés des dizaines qui coûtent plus qu'ils ne rapportent.",
+        "points": [
+          "Entretiens courts avec les personnes qui font le travail, pas seulement avec la direction.",
+          "Cartographie des tâches répétitives et de leur coût réel en temps.",
+          "Sélection des usages à fort retour, avec estimation du gain et de l'effort.",
+          "Feuille de route classée par ordre de rentabilité, y compris ce qu'il faut renoncer à faire."
+        ]
+      },
+      "implementation": {
+        "title": "Implémenter la solution",
+        "lead": "Un cas d'usage validé ne vaut rien tant qu'il n'est pas dans les mains de vos équipes. C'est l'étage où l'on construit, branche et met en production.",
+        "points": [
+          "Développement de l'outil ou intégration d'une solution existante, selon ce qui est le moins coûteux.",
+          "Raccordement à vos données et à vos outils actuels, sans tout remplacer.",
+          "Vérification humaine là où l'erreur coûte cher, automatisation complète là où elle ne coûte rien.",
+          "Transfert de compétences pour que vous ne dépendiez pas de moi ensuite."
+        ]
+      }
+    }
+  },
+  "why": {
+    "eyebrow": "Pourquoi moi",
+    "title": "Vingt ans de terrain, pas de plaquette",
+    "lead": "J'ai passé vingt ans à concevoir et faire tourner des systèmes pour de grandes organisations. L'IA n'y change pas la méthode : comprendre le travail réel, cibler ce qui rapporte, livrer quelque chose qui tient. Je travaille seul, ce qui veut dire que la personne qui vous écoute est celle qui construit.",
+    "proofs": [
+      {
+        "term": "Le principe de Pareto, appliqué",
+        "detail": "Quelques usages bien choisis produisent l'essentiel du gain. Le reste, je vous dis de ne pas le faire."
+      },
+      {
+        "term": "Ancré à Calais",
+        "detail": "Sur place, en présentiel quand c'est utile. Je connais le tissu local et ses contraintes."
+      },
+      {
+        "term": "Sans jargon",
+        "detail": "Si je ne peux pas expliquer un choix technique en deux phrases, c'est qu'il est probablement mauvais."
+      },
+      {
+        "term": "Vous rendre autonome",
+        "detail": "L'objectif est que vous n'ayez plus besoin de moi, pas de vous vendre un abonnement."
+      }
+    ]
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Un projet, une question, un doute ?",
+    "lead": "Écrivez-moi en deux lignes ce que vous cherchez à faire. Je réponds, et je vous dis franchement si je suis la bonne personne.",
+    "channels": {
+      "email": "Par mail",
+      "linkedin": "Sur LinkedIn"
+    }
+  }
+}

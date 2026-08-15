@@ -1,56 +1,188 @@
+// =============================================================================
+//  Y-GaMaa — Design tokens
+//  Source de vérité unique pour la marque. Direction : « tech crédible »,
+//  base neutre froide + accent cyan/teal, typo Space Grotesk / Inter.
+//
+//  Deux couches :
+//   1. Palette brute (Sass) — valeurs littérales, utilisables dans les
+//      fonctions Sass (rgba, mix…). Ne dépend pas du thème.
+//   2. Tokens sémantiques (CSS custom properties) — définis dans
+//      global/_tokens.scss, avec variante claire/sombre. C'est ce que les
+//      composants doivent consommer : var(--yg-text), var(--yg-accent)…
+// =============================================================================
 
-// project specific variables
-$theme-color-6: #AF1320;
-$theme-color--default: #B19DCF;
-$theme-color--heading: #2f3281;
-$theme-color--black: #333333;
-$theme-color--green: #38cb89;
-$theme-color-sub--heading: #6d70a6;
-$transition--default: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
-$gradient--default: linear-gradient(218deg,#5E61E7 0,#9C7AF2 50%,#5E61E7 100%);
-$gradient--default-two: linear-gradient(-259deg,#5E60E7 0,#9C7AF2 65%);
-$gradient--secondary: linear-gradient(-180deg,#fff 0,#eceefa 100%);
-$gray-gradient: -webkit-linear-gradient(top,#FFF 0,#F6F5F9 74%,#F6F5F9 100%);
 
+// -----------------------------------------------------------------------------
+//  1. Palette brute
+// -----------------------------------------------------------------------------
 
-// Font Family
-$font-family-name: Rubik, Helvetica, Arial, sans-serif;
-$heading-font-family-name: Rubik, Helvetica, Arial, sans-serif;
-$font-awesome-pro: 'Font Awesome 5 Pro';
-$font-awesome-brand: 'Font Awesome 5 Brands';
+// Neutres — froids, légèrement teintés vers le teal pour s'accorder à l'accent.
+$c-neutral-0:   #ffffff;
+$c-neutral-50:  #f5f9fa;
+$c-neutral-100: #e9f0f2;
+$c-neutral-200: #d5e0e4;
+$c-neutral-300: #b4c4ca;
+$c-neutral-400: #8798a0;
+$c-neutral-500: #647680;
+$c-neutral-600: #4a5b64;
+$c-neutral-700: #33434b;
+$c-neutral-800: #1c2b32;
+$c-neutral-900: #101f25;
+$c-neutral-950: #071a1f;
 
-// Colors ---------------
+// Accent — cyan/teal « signal ». Contrastes vérifiés (WCAG AA) :
+//   accent-600 sur blanc = 3.7:1  → OK pour surfaces, bordures, gros titres,
+//                                   PAS pour du texte courant.
+//   accent-700 sur blanc = 5.4:1  → OK texte courant en mode clair.
+//   accent-400 sur neutral-950 = 9.9:1 → OK texte en mode sombre.
+$c-accent-300: #67e8f9;
+$c-accent-400: #22d3ee;
+$c-accent-500: #06b6d4;
+$c-accent-600: #0891b2;
+$c-accent-700: #0e7490;
+$c-accent-800: #155e75;
 
-$white: #ffffff;
+// États
+$c-success: #15803d;
+$c-success-dark: #4ade80;
+$c-warning: #b45309;
+$c-warning-dark: #fbbf24;
+$c-danger:  #b91c1c;
+$c-danger-dark: #f87171;
+
+$white: $c-neutral-0;
 $black: #000000;
 
-// Body Text
-$body-text-color: #595959;
-$body-text-color-dark:#A1A1A1;
-$body-font-weight: 400;
-$body-line-height: 1.74;
-$body-font-size: 15px;
-$body-bg-color: $white;
-$body-bg-color-dark: $black;
 
-// Heading Text
-$heading-text-color: $theme-color--heading;
-$heading-text-color-dark: $theme-color--default;
-$heading-font-weight: 500;
+// -----------------------------------------------------------------------------
+//  2. Typographie
+// -----------------------------------------------------------------------------
+
+// Polices auto-hébergées via @fontsource-variable (cf. nuxt.config.ts).
+// Aucune requête externe : la CSP peut rester en font-src 'self'.
+$font-family-name: 'Inter Variable', Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+$heading-font-family-name: 'Space Grotesk Variable', 'Space Grotesk', 'Inter Variable', Helvetica, Arial, sans-serif;
+$font-family-mono: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+
+// Graisses
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-semibold: 600;
+$fw-bold: 700;
+
+$body-font-weight: $fw-regular;
+$heading-font-weight: $fw-bold;
+
+// Échelle de corps de texte (rem, base 16px)
+$fs-xs:   0.8125rem; // 13px
+$fs-sm:   0.9375rem; // 15px
+$fs-base: 1.0625rem; // 17px
+$fs-lg:   1.1875rem; // 19px
+$fs-xl:   1.375rem;  // 22px
+
+$body-font-size: $fs-base;
+$body-line-height: 1.65;
+$heading-line-height: 1.15;
+
+// Échelle de titres — desktop / tablette / mobile.
+// Utilisée par global/_default.scss.
+$h1-size: 4rem;    $h1-size-md: 3rem;     $h1-size-sm: 2.25rem;
+$h2-size: 3rem;    $h2-size-md: 2.375rem; $h2-size-sm: 1.875rem;
+$h3-size: 2.25rem; $h3-size-md: 1.875rem; $h3-size-sm: 1.5rem;
+$h4-size: 1.75rem; $h4-size-md: 1.5rem;   $h4-size-sm: 1.3125rem;
+$h5-size: 1.375rem;
+$h6-size: 1.125rem;
+
+// Space Grotesk est large : un léger resserrement sur les gros titres.
+$heading-letter-spacing: -0.02em;
+$eyebrow-letter-spacing: 0.08em;
+
+
+// -----------------------------------------------------------------------------
+//  3. Espacement, rayons, ombres, mouvement
+// -----------------------------------------------------------------------------
+
+$space-1:  0.25rem;
+$space-2:  0.5rem;
+$space-3:  0.75rem;
+$space-4:  1rem;
+$space-5:  1.5rem;
+$space-6:  2rem;
+$space-7:  3rem;
+$space-8:  4rem;
+$space-9:  6rem;
+$space-10: 8rem;
+
+$radius-sm: 4px;
+$radius-md: 8px;
+$radius-lg: 14px;
+$radius-xl: 22px;
+$radius-pill: 999px;
+
+$shadow-sm: 0 1px 2px rgba($c-neutral-950, 0.06);
+$shadow-md: 0 4px 16px rgba($c-neutral-950, 0.08);
+$shadow-lg: 0 16px 48px rgba($c-neutral-950, 0.12);
+$shadow-accent: 0 8px 24px rgba($c-accent-600, 0.25);
+
+$transition--default: all 0.25s cubic-bezier(0.22, 0.61, 0.36, 1);
+$transition-fast: all 0.15s cubic-bezier(0.22, 0.61, 0.36, 1);
+
+// Le halo de focus est un token : il doit rester visible sur les deux thèmes.
+$focus-ring-width: 3px;
+
+
+// -----------------------------------------------------------------------------
+//  4. Gradients
+// -----------------------------------------------------------------------------
+
+// Décoratif : blanc dessus = 3.7:1 au point le plus clair → gros texte seulement.
+$gradient--default: linear-gradient(135deg, $c-accent-800 0%, $c-accent-600 100%);
+// Sombre de bout en bout : blanc dessus ≥ 7:1 → sûr pour du texte courant.
+$gradient--default-two: linear-gradient(135deg, $c-neutral-950 0%, $c-accent-800 100%);
+$gradient--secondary: linear-gradient(180deg, $c-neutral-0 0%, $c-neutral-50 100%);
+$gray-gradient: linear-gradient(180deg, $c-neutral-0 0%, $c-neutral-50 74%, $c-neutral-50 100%);
+
+
+// -----------------------------------------------------------------------------
+//  5. Compat — anciens noms, repointés sur la nouvelle palette
+//
+//  Les composants hérités (Hero, ServiceSection, AboutSection…) référencent
+//  encore ces variables. Elles sont conservées pour ne rien casser et pointent
+//  désormais sur les nouveaux tokens, si bien que le site adopte la nouvelle
+//  identité sans réécriture. Elles disparaissent avec la reconstruction des
+//  composants — ne pas en ajouter de nouvelles.
+// -----------------------------------------------------------------------------
+
+$theme-color--default: $c-accent-600;
+$theme-color--heading: $c-neutral-900;
+$theme-color-sub--heading: $c-neutral-500;
+$theme-color--black: $c-neutral-800;
+$theme-color--green: $c-success;
+$theme-color-6: $c-accent-700;
+
+$body-text-color: $c-neutral-700;
+$body-text-color-dark: $c-neutral-300;
+$body-bg-color: $c-neutral-0;
+$body-bg-color-dark: $c-neutral-950;
+
+$heading-text-color: $c-neutral-900;
+$heading-text-color-dark: $c-neutral-50;
+
+$primary:   $c-accent-600;
+$secondary: $c-neutral-800;
+$success:   $c-success;
+$info:      $c-accent-500;
+$warning:   $c-warning;
+$danger:    $c-danger;
+$light:     $c-neutral-50;
 
 
 
+// -----------------------------------------------------------------------------
+//  6. Couleurs de marques tierces (liens sociaux)
+//  Hors design system : imposées par les marques, ne pas retoucher.
+// -----------------------------------------------------------------------------
 
-// Other Colors
-$primary:       #004395;
-$secondary:     #f9c322;
-$success:       #28a745;
-$info:          #17a2b8;
-$warning:       #ffc107;
-$danger:        #dc3545;
-$light:         #f8f9fa;
-
-// Social Color
 $android: #7AC157;
 $apple: #B8B8B8;
 $behance: #1869FF;
@@ -110,8 +242,10 @@ $yahoo: #4101AF;
 $youtube: #FE0000;
 
 
+// -----------------------------------------------------------------------------
+//  7. Breakpoints
+// -----------------------------------------------------------------------------
 
-// Responsive Variables
 $xlmax-device: 'only screen and (min-width: 1200px) and (max-width: 1599.98px)';
 $laptop-device: 'only screen and (min-width: 1200px) and (max-width: 1499px)';
 $desktop-device: 'only screen and (min-width: 992px) and (max-width: 1199px)';
@@ -119,6 +253,3 @@ $tablet-device:'only screen and (min-width: 768px) and (max-width: 991px)';
 $large-mobile:'only screen and (max-width: 767px)';
 $small-mobile: 'only screen and (max-width: 575px)';
 $extra-small-mobile: 'only screen and (max-width: 479px)';
-
-
-

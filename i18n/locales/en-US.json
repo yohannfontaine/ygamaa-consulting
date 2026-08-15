@@ -1,0 +1,142 @@
+{
+  "meta": {
+    "title": "Y-GaMaa — Practical AI for businesses and individuals in Calais",
+    "description": "Training, use-case discovery and AI implementation for businesses and individuals in Calais and its region. Twenty years in tech, no jargon."
+  },
+  "menu": {
+    "label": "Main navigation",
+    "open": "Menu",
+    "close": "Close",
+    "home": "Home",
+    "generator": "Use cases",
+    "offer": "The offer",
+    "why": "Why me",
+    "contact": "Contact"
+  },
+  "hero": {
+    "eyebrow": "Calais and its region",
+    "title": "AI made concrete, for businesses and individuals",
+    "lead": "Twenty years in tech. I train, I pinpoint the use cases that actually matter, and I implement. No jargon, no empty promises.",
+    "fork": {
+      "label": "Where do you start?",
+      "particulier": "I'm an individual",
+      "entreprise": "I'm a business"
+    }
+  },
+  "footer": {
+    "legal": "Legal notices",
+    "social": {
+      "linkedin": "View the LinkedIn account",
+      "github": "View the GitHub repository"
+    }
+  },
+  "generator": {
+    "eyebrow": "Use case generator",
+    "title": "What AI can actually do for you",
+    "subtitle": "Tell me who you are and I'll show you real uses — not theory.",
+    "audience": {
+      "legend": "You are",
+      "particulier": "An individual",
+      "entreprise": "A business"
+    },
+    "sector": {
+      "label": "Your sector",
+      "placeholder": "Pick a sector…"
+    },
+    "empty": "Pick your sector to see the matching use cases.",
+    "count": "No use cases | 1 use case shown | {count} use cases shown",
+    "gain": "Gain:",
+    "tiers": {
+      "formation": "Training",
+      "conseil": "Use cases",
+      "implementation": "Implementation"
+    }
+  },
+  "offer": {
+    "eyebrow": "The offer",
+    "title": "Three steps, in the order that works",
+    "subtitle": "You can start at any of them. Most of the time, they follow on from each other.",
+    "more": "Learn more",
+    "tiers": {
+      "formation": {
+        "name": "Training",
+        "pitch": "You and your teams, self-sufficient with AI in a few sessions — on your real work, not on demo examples."
+      },
+      "conseil": {
+        "name": "Finding use cases",
+        "pitch": "A short diagnosis that separates what pays off from what merely looks good in a meeting, with numbers attached."
+      },
+      "implementation": {
+        "name": "Implementation",
+        "pitch": "From a validated idea to a working tool, plugged into your existing data and processes."
+      }
+    },
+    "detail": {
+      "covers": "What it covers",
+      "cta": "Let's talk it through",
+      "back": "Back to the three steps",
+      "formation": {
+        "title": "Training your teams on AI",
+        "lead": "Training that starts from your work, not from a catalogue. We use your documents, your emails, your processes — and you leave with habits, not notes.",
+        "points": [
+          "Small-group or one-to-one sessions, on site or remote.",
+          "Getting to grips with the main assistants: what they can do, and above all what they cannot.",
+          "Writing effective instructions, checking answers, spotting plausible-sounding mistakes.",
+          "Confidentiality ground rules: which data may leave the building, and which never may."
+        ]
+      },
+      "conseil": {
+        "title": "Finding the use cases that matter",
+        "lead": "AI can do anything, which means it does nothing in particular. The work is choosing: a handful of high-return uses, sifted from the dozens that cost more than they return.",
+        "points": [
+          "Short interviews with the people doing the work, not only with management.",
+          "A map of repetitive tasks and what they really cost in time.",
+          "Selection of high-return uses, with an estimate of both gain and effort.",
+          "A roadmap ordered by payoff — including what you should decline to do."
+        ]
+      },
+      "implementation": {
+        "title": "Implementing the solution",
+        "lead": "A validated use case is worth nothing until it is in your teams' hands. This is where it gets built, connected and put into production.",
+        "points": [
+          "Building the tool or integrating an existing one, whichever costs less.",
+          "Connecting to your current data and tools, without replacing everything.",
+          "A human check where mistakes are expensive, full automation where they are not.",
+          "Handover of skills, so you are not dependent on me afterwards."
+        ]
+      }
+    }
+  },
+  "why": {
+    "eyebrow": "Why me",
+    "title": "Twenty years on the ground, not a brochure",
+    "lead": "I spent twenty years designing and running systems for large organisations. AI doesn't change the method: understand the actual work, target what pays off, ship something that holds up. I work alone, which means the person listening to you is the person building.",
+    "proofs": [
+      {
+        "term": "Pareto, applied",
+        "detail": "A handful of well-chosen uses produce most of the gain. For the rest, I'll tell you not to bother."
+      },
+      {
+        "term": "Based in Calais",
+        "detail": "On site and in person when it helps. I know the local fabric and its constraints."
+      },
+      {
+        "term": "No jargon",
+        "detail": "If I can't explain a technical choice in two sentences, it's probably a bad one."
+      },
+      {
+        "term": "Making you self-sufficient",
+        "detail": "The goal is that you stop needing me, not that you sign a subscription."
+      }
+    ]
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "A project, a question, a doubt?",
+    "lead": "Write me two lines about what you're trying to do. I'll reply, and I'll tell you straight if I'm the right person.",
+    "channels": {
+      "email": "By email",
+      "linkedin": "On LinkedIn"
+    }
+  }
+}

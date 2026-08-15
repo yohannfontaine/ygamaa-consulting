@@ -1,305 +1,202 @@
-<script setup>
-const scrolled = ref(false);
-const limitPosition = ref(200);
-const lastPosition = ref(500);
-const showMenu = ref(false);
+<script setup lang="ts">
+/**
+ * Navigation principale, en markup natif.
+ *
+ * Plus de `bootstrap-vue-next` ni de `ClientOnly` : la navigation est présente
+ * dans le HTML prérendu, donc lisible par les moteurs et sans saut de mise en
+ * page à l'hydratation. Le collant est fait en CSS (`position: sticky`) plutôt
+ * qu'avec un écouteur de scroll.
+ */
+const localePath = useLocalePath()
+const switchLocalePath = useSwitchLocalePath()
+const { locale, locales } = useI18n()
 
-function handleScroll() {
-  if (
-    lastPosition.value < window.scrollY &&
-    limitPosition.value < window.scrollY
-  ) {
-    scrolled.value = true;
-    // move up!
-  }
-  if (lastPosition.value > window.scrollY) {
-    scrolled.value = true;
-    // move down
-  }
-  lastPosition.value = window.scrollY;
-  scrolled.value = window.scrollY > 50;
+const menuId = useId()
+const open = ref(false)
+
+const sections = ['home', 'generator', 'offer', 'why', 'contact']
+
+// Les autres locales que celle affichée : sur deux langues, ça donne un seul
+// lien, ce qui suffit et évite un menu déroulant pour rien.
+const otherLocales = computed(() =>
+  (locales.value as { code: string, name?: string }[]).filter(l => l.code !== locale.value),
+)
+
+// Une ancre sur une page détail doit ramener à l'accueil, d'où le préfixe.
+function anchor(section: string) {
+  return `${localePath('/')}#${section}`
 }
-
-function toogle() {
-  //fix issue with bootsrap
-  setTimeout(() => (showMenu.value = !showMenu.value), 300);
-}
-
-onMounted(() => {
-  handleScroll();
-  window.addEventListener("scroll", handleScroll);
-});
-
-onDeactivated(() => {
-  window.removeEventListener("scroll", handleScroll);
-});
 </script>
 
-
 <template>
-  <ClientOnly>
-    <BNavbar
-      toggleable="lg"
-      fixed="top"
-      class="header-area"
-      :class="{
-        'is-sticky': scrolled,
-        'menu-open': showMenu,
-        'navbar-dark': $colorMode.value == 'dark',
-      }"
-    >
-      <BNavbarBrand class="navbar-brand" to="/">
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <NuxtLink class="site-header__brand" :to="localePath('/')">
         <nuxt-img
           src="img/logo/logo-light.png"
-          alt="logo ygamaa"
+          alt="Y-GaMaa Consulting"
           format="webp"
-          sizes="sm:150px lg:220px xl:260px"
-          width="260"
-          height="90"
+          sizes="sm:150px lg:200px"
+          width="200"
+          height="69"
         />
-      </BNavbarBrand>
-      <BNavbarToggle
-        target="nav_collapse"
-        :class="{ collapsed: showMenu }"
-        @click="toogle"
-      ></BNavbarToggle>
-      <BCollapse
-        class="navbar-collapse collapse default-nav justify-content-center"
-        :class="{ show: showMenu }"
-        is-nav
-        id="nav_collapse"
+      </NuxtLink>
+
+      <button
+        class="site-header__toggle"
+        type="button"
+        :aria-expanded="open"
+        :aria-controls="menuId"
+        @click="open = !open"
       >
-        <BNavbarNav class="navbar-nav main-menu">
-          <BNavItem href="/#home" class="scroll" @click="toogle"
-            ><span>{{ $t("menu.home") }}</span></BNavItem
+        {{ open ? $t('menu.close') : $t('menu.open') }}
+      </button>
+
+      <div :id="menuId" class="site-header__menu" :class="{ 'is-open': open }">
+        <nav class="site-header__nav" :aria-label="$t('menu.label')">
+          <!-- Ancres en `<a>` natif et non en NuxtLink : le routeur considère
+               `/#ancre` comme correspondant à la route `/` et poserait
+               `aria-current="page"` sur les cinq liens à la fois. -->
+          <a
+            v-for="section in sections"
+            :key="section"
+            class="site-header__link"
+            :href="anchor(section)"
+            @click="open = false"
           >
-          <BNavItem href="/#about" class="scroll" @click="toogle"
-            ><span>{{ $t("menu.about") }}</span></BNavItem
+            {{ $t(`menu.${section}`) }}
+          </a>
+        </nav>
+
+        <div class="site-header__tools">
+          <NuxtLink
+            v-for="other in otherLocales"
+            :key="other.code"
+            class="site-header__lang"
+            :to="switchLocalePath(other.code)"
           >
-          <BNavItem href="/#service" class="scroll" @click="toogle"
-            ><span>{{ $t("menu.services") }}</span></BNavItem
-          >
-          <BNavItem href="/#partner" class="scroll" @click="toogle"
-            ><span>{{ $t("menu.partners") }}</span></BNavItem
-          >
-          <BNavItem href="/#contact" class="scroll" @click="toogle"
-            ><span>{{ $t("menu.contact") }}</span></BNavItem
-          >
-        </BNavbarNav>
-        <DarkModeSwitcher></DarkModeSwitcher>
-      </BCollapse>
-    </BNavbar>
-  </ClientOnly>
+            {{ other.name ?? other.code.toUpperCase() }}
+          </NuxtLink>
+
+          <!-- Seul le switch est côté client : son `aria-checked` dépend de la
+               préférence du visiteur, inconnue au prérendu. -->
+          <ClientOnly>
+            <DarkModeSwitcher />
+          </ClientOnly>
+        </div>
+      </div>
+    </div>
+  </header>
 </template>
 
 <style lang="scss" scoped>
-// header section start
-.fixed-top {
-  z-index: 9;
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--yg-surface);
+  border-bottom: 1px solid var(--yg-border);
 }
-.navbar-brand img {
-  width: 220px;
-  height: 76px;
-  @media #{$tablet-device, $large-mobile} {
+
+.site-header__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: $space-4;
+  padding-block: $space-3;
+}
+
+.site-header__brand img {
+  display: block;
+  width: 200px;
+  height: auto;
+}
+
+.site-header__toggle {
+  display: none;
+  margin-left: auto;
+  padding: $space-2 $space-4;
+  border: 1px solid var(--yg-border-strong);
+  border-radius: $radius-pill;
+  background: transparent;
+  color: var(--yg-text);
+  font: inherit;
+  font-size: $fs-sm;
+  font-weight: $fw-semibold;
+}
+
+.site-header__menu {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: $space-5;
+}
+
+.site-header__nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-5;
+}
+
+.site-header__link {
+  font-size: $fs-sm;
+  font-weight: $fw-medium;
+  color: var(--yg-text);
+  text-decoration: none;
+}
+
+.site-header__link:hover {
+  color: var(--yg-accent-text);
+}
+
+.site-header__link:focus-visible,
+.site-header__lang:focus-visible,
+.site-header__toggle:focus-visible {
+  outline: $focus-ring-width solid var(--yg-focus);
+  outline-offset: 2px;
+}
+
+.site-header__tools {
+  display: flex;
+  align-items: center;
+  gap: $space-4;
+}
+
+.site-header__lang {
+  font-size: $fs-sm;
+  font-weight: $fw-semibold;
+  color: var(--yg-accent-text);
+  text-decoration: none;
+}
+
+@media (max-width: 991px) {
+  .site-header__toggle {
+    display: block;
+  }
+
+  .site-header__menu {
+    display: none;
+    flex-basis: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: $space-4;
+    padding-bottom: $space-4;
+  }
+
+  .site-header__menu.is-open {
+    display: flex;
+  }
+
+  .site-header__nav {
+    flex-direction: column;
+    gap: $space-4;
+  }
+
+  .site-header__brand img {
     width: 150px;
-    height: 52px;
   }
-}
-.navbar {
-  padding: 0;
-  &.header-area {
-    @media #{$desktop-device, $tablet-device, $large-mobile} {
-      padding: 15px;
-    }
-  }
-  .main-menu {
-    // responsive
-    @media #{$desktop-device, $tablet-device, $large-mobile} {
-      padding: 15px 0;
-    }
-    li {
-      .nav-link {
-        display: block;
-        font-size: 14px;
-        font-weight: 500;
-        letter-spacing: 1px;
-        padding: 50px 26px;
-        // responsive
-        @media #{$laptop-device} {
-          padding: 50px 15px;
-        }
-        @media #{$desktop-device, $tablet-device, $large-mobile} {
-          padding: 10px 14px;
-        }
-        span {
-          position: relative;
-          &:after {
-            content: "";
-            width: 0;
-            height: 1px;
-            bottom: -3px;
-            position: absolute;
-            left: auto;
-            right: 0;
-            z-index: -1;
-            background-color: $theme-color--black;
-            transition: $transition--default;
-          }
-        }
-      }
-
-      &:hover {
-        .nav-link {
-          span {
-            color: $theme-color--black;
-            &:after {
-              width: 100%;
-              left: 0;
-              right: auto;
-            }
-          }
-        }
-      }
-      &.active {
-        .nav-link {
-          span {
-            color: $theme-color--black;
-          }
-        }
-      }
-    }
-  }
-  &.text-white {
-    .main-menu {
-      .nav-item {
-        .nav-link {
-          color: $white;
-          // responsive
-          @media #{$desktop-device, $tablet-device, $large-mobile} {
-            color: $black;
-          }
-        }
-        &:hover,
-        &.active {
-          .nav-link {
-            span {
-              color: $white;
-              // responsive
-              @media #{$desktop-device, $tablet-device, $large-mobile} {
-                color: $black;
-              }
-              &:after {
-                background-color: $white;
-              }
-            }
-          }
-        }
-      }
-    }
-    &.is-sticky {
-      .main-menu {
-        .nav-item {
-          .nav-link {
-            color: $black;
-          }
-          &:hover,
-          &.active {
-            .nav-link {
-              span {
-                color: rgba(0, 0, 0, 0.5);
-                // responsive
-                @media #{$desktop-device, $tablet-device, $large-mobile} {
-                  color: $theme-color--default;
-                }
-                &:after {
-                  background-color: $black;
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-.header-area {
-  &.is-sticky {
-    animation: 0.95s ease-in-out 0s normal none 1 running fadeInDown;
-    z-index: 999;
-    transition: $transition--default;
-    box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.1);
-    background-color: $white;
-    .main-menu {
-      li {
-        .nav-link {
-          padding: 30px 26px;
-          // responsive
-          @media #{$laptop-device} {
-            padding: 30px 15px;
-          }
-          @media #{$desktop-device, $tablet-device, $large-mobile} {
-            padding: 10px 14px;
-          }
-        }
-      }
-    }
-    .ht-btn--outline {
-      line-height: 44px;
-    }
-  }
-}
-
-.dark-mode .header-area {
-  &.is-sticky {
-    box-shadow: 0 8px 20px 0 rgba(200, 200, 200, 0.3);
-    background-color: $black;
-  }
-}
-
-@media #{$small-mobile, $large-mobile} {
-  .dark-mode .header-area {
-    background-color: $black;
-  }
-  .light-mode .header-area {
-    background-color: $white;
-  }
-}
-
-@media #{$tablet-device, $large-mobile} {
-  #nav_collapse {
-    background-color: $white;
-    padding: 5px 20px;
-  }
-
-  .dark-mode #nav_collapse {
-    background-color: $black;
-  }
-
-  .menu-open .navbar-toggler {
-    border-color: $theme-color--default;
-  }
-}
-
-#nav_collapse {
-  @media #{$desktop-device, $tablet-device, $large-mobile} {
-    order: 3;
-  }
-  width: 100%;
-}
-.navbar-toggler {
-  @media #{$desktop-device, $tablet-device, $large-mobile} {
-    order: 3;
-  }
-  @media #{$small-mobile} {
-    margin-top: 15px;
-  }
-  &:focus {
-    box-shadow: 0 0 0 0;
-  }
-}
-
-.light-mode .nav-link span {
-  color: $theme-color--black;
 }
 </style>
