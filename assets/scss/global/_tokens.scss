@@ -40,6 +40,12 @@
   --yg-accent-soft: #{rgba($c-accent-600, 0.08)}; // fond teinté léger
   --yg-on-accent: #{$c-neutral-0};
 
+  // Marque — les deux seules encres du logo. Volontairement distinctes des
+  // tokens d'accent : le logo ne doit pas se reteinter si la couleur des
+  // boutons évolue. Décoratives, jamais porteuses d'information seule.
+  --yg-brand-ink: #{$c-neutral-900};
+  --yg-brand-accent: #{$c-accent-600};
+
   // Bordures & séparateurs
   --yg-border: #{$c-neutral-200};
   --yg-border-strong: #{$c-neutral-300};
@@ -76,6 +82,9 @@
   --yg-accent-vivid: #{$c-accent-300};
   --yg-accent-soft: #{rgba($c-accent-400, 0.12)};
   --yg-on-accent: #{$c-neutral-950};
+
+  --yg-brand-ink: #{$c-neutral-50};
+  --yg-brand-accent: #{$c-accent-400};
 
   --yg-border: #{$c-neutral-800};
   --yg-border-strong: #{$c-neutral-700};

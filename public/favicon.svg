@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="13 3 48 57">
+<style>
+.i{fill:#101f25}.a{fill:#0891b2}
+@media(prefers-color-scheme:dark){.i{fill:#f5f9fa}.a{fill:#22d3ee}}
+</style>
+<path class="a" d="M34 12 L60 4 L60 24 Z"/>
+<rect class="a" x="22" y="9" width="11" height="12" rx="2"/>
+<rect class="i" x="19" y="21" width="17" height="5" rx="2"/>
+<path class="i" d="M22.5 26 h10 L37 54 H18 Z"/>
+<rect class="i" x="14" y="53" width="27" height="6" rx="3"/>
+</svg>

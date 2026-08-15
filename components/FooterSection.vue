@@ -30,7 +30,7 @@ const socialLinks = [
     <div class="container site-footer__inner">
       <p class="site-footer__copyright">
         &copy; {{ year }}
-        <NuxtLink :to="localePath('/')">Y-GaMaa Consulting</NuxtLink>
+        <NuxtLink :to="localePath('/')">{{ $t('brand.name') }}</NuxtLink>
       </p>
 
       <NuxtLink class="site-footer__legal" :to="localePath('/legal')">
