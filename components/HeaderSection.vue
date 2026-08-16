@@ -39,8 +39,11 @@ function anchor(section: string) {
         :to="localePath('/')"
         :aria-label="$t('brand.home')"
       >
-        <BrandLogo class="site-header__logo site-header__logo--large" variante="reduit" />
-        <BrandLogo class="site-header__logo site-header__logo--small" variante="mobile" />
+        <!-- Les deux cadrages portent `anime`, mais un seul joue : le cadrage
+             masqué est en `display: none`, et une animation ne tourne pas sur
+             un élément non rendu. -->
+        <BrandLogo class="site-header__logo site-header__logo--large" variante="complet" anime />
+        <BrandLogo class="site-header__logo site-header__logo--small" variante="mobile" anime />
       </NuxtLink>
 
       <button
