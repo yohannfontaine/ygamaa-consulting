@@ -18,11 +18,7 @@ if (!page.value) {
 </script>
 
 <template>
-  <NuxtLayout>
-    <HeaderSection />
-    <ContentRenderer v-if="page" :value="page" class="content" />
-    <FooterSection />
-  </NuxtLayout>
+  <ContentRenderer v-if="page" :value="page" class="content" />
 </template>
 
 <style lang="scss">

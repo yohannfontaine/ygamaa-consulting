@@ -28,7 +28,9 @@ const head = useLocaleHead({
         </template>
       </Head>
       <Body>
+        <HeaderSection />
         <slot />
+        <FooterSection />
       </Body>
     </Html>
   </div>
