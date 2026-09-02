@@ -1,7 +1,3 @@
 <template>
-  <NuxtLayout>
-    <HeaderSection />
-    <OfferDetail tier="conseil" />
-    <FooterSection />
-  </NuxtLayout>
+  <OfferDetail tier="conseil" />
 </template>

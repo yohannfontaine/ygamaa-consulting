@@ -12,21 +12,15 @@ const title = computed(() =>
 </script>
 
 <template>
-  <NuxtLayout>
-    <!-- Navbar section -->
-    <HeaderSection />
-    <!-- Hero section -->
-    <Hero />
-    <!-- Générateur de cas d'usage -->
-    <UseCaseGenerator />
-    <!-- Les 3 portes de l'offre -->
-    <OfferGateways />
-    <!-- Pourquoi moi -->
-    <WhyMe />
-    <!-- Contact -->
-    <ContactSection />
-    <!-- Footer section -->
-    <FooterSection />
-  </NuxtLayout>
+  <!-- Hero section -->
+  <Hero />
+  <!-- Générateur de cas d'usage -->
+  <UseCaseGenerator />
+  <!-- Les 3 portes de l'offre -->
+  <OfferGateways />
+  <!-- Pourquoi moi -->
+  <WhyMe />
+  <!-- Contact -->
+  <ContactSection />
 </template>
 
