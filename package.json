@@ -10,9 +10,10 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "@nuxt/content": "^2.12.1",
+    "@nuxt/content": "3.6.3",
     "@nuxt/image": "^2.1.0",
     "@nuxtjs/color-mode": "^3.3.3",
+    "better-sqlite3": "^13.0.3",
     "nuxt": "^3.21.10",
     "typescript": "^5.9.0",
     "vitest": "^4.1.10",
@@ -24,5 +25,9 @@
     "@nuxtjs/fontaine": "^0.4.0",
     "@nuxtjs/i18n": "^10.0.0",
     "sass": "^1.60.0"
+  },
+  "resolutions": {
+    "nanoid": "^3.3.18",
+    "@nuxtjs/mdc": "0.17.2"
   }
 }
