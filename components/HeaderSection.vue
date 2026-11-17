@@ -19,7 +19,7 @@ const sections = ['home', 'generator', 'offer', 'why', 'contact']
 // Les autres locales que celle affichée : sur deux langues, ça donne un seul
 // lien, ce qui suffit et évite un menu déroulant pour rien.
 const otherLocales = computed(() =>
-  (locales.value as { code: string, name?: string }[]).filter(l => l.code !== locale.value),
+  locales.value.filter(l => l.code !== locale.value),
 )
 
 // Une ancre sur une page détail doit ramener à l'accueil, d'où le préfixe.

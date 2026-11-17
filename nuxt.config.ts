@@ -30,6 +30,9 @@ export default defineNuxtConfig({
   colorMode: {
     preference: "system", // default value of $colorMode.preference
     fallback: "light",
+    // Keep the `.dark-mode` / `.light-mode` classes the design tokens target:
+    // @nuxtjs/color-mode v4 changed the default suffix to an empty string.
+    classSuffix: "-mode",
   },
   i18n: {
     detectBrowserLanguage: {
