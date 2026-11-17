@@ -35,11 +35,12 @@ export default defineNuxtConfig({
     classSuffix: "-mode",
   },
   i18n: {
-    detectBrowserLanguage: {
-      useCookie: true,
-      cookieKey: "i18n_redirected",
-      redirectOn: "root", // recommended
-    },
+    // No browser language detection: on a static site the module switches the
+    // locale before hydration, so the prerendered French home page is hydrated
+    // in English for non-French browsers (nuxt-modules/i18n#3608). French stays
+    // at the root for everyone, English is reached through `/en` and the
+    // language switch.
+    detectBrowserLanguage: false,
     locales: [
       {
         code: "en",
