@@ -23,6 +23,9 @@ Instructions for AI coding agents (and humans) contributing to this repository.
   explain the *why* in the body when the change is not self-explanatory.
 - Describe the technical change itself. Do not reference internal planning
   documents, task identifiers, or review steps: this repository is public.
+- **Do not add co-authoring trailers**: no `Co-Authored-By:` line, and no
+  other AI or tool attribution (such as "Generated with ..."), in commit
+  messages. Commits are authored by the repository owner only.
 
 ## Comments in code
 
