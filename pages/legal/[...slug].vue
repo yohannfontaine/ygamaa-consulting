@@ -2,11 +2,17 @@
 const route = useRoute()
 const { locale } = useI18n()
 
+// Firebase Hosting redirects `/legal` to `/legal/`, while the prerenderer
+// renders `/legal`. Strip the trailing slash so the key matches the prerendered
+// payload: otherwise the client re-runs the query through SQLite WASM, which
+// the CSP blocks, and the page falls back to a 404.
+const path = computed(() => route.path.replace(/\/+$/, '') || '/')
+
 const chemin = computed(() =>
-  locale.value === 'en' ? route.path.replace(/^\/en/, '') || '/' : route.path,
+  locale.value === 'en' ? path.value.replace(/^\/en/, '') || '/' : path.value,
 )
 
-const { data: page } = await useAsyncData(`legal-${route.path}`, () =>
+const { data: page } = await useAsyncData(`legal-${path.value}`, () =>
   queryCollection(locale.value === 'en' ? 'legal_en' : 'legal_fr')
     .path(chemin.value)
     .first(),
