@@ -10,8 +10,8 @@
 const channels = [
   {
     key: 'email',
-    href: 'mailto:contact@ygamaa-consulting.com',
-    value: 'contact@ygamaa-consulting.com',
+    href: 'mailto:contact@ygamaa-consulting.fr',
+    value: 'contact@ygamaa-consulting.fr',
   },
   {
     key: 'linkedin',
