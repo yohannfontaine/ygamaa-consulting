@@ -1,14 +1,19 @@
-# Déploie en production à chaque poussée sur main, après les contrôles.
+# Deploys to production on every push to main, after the checks. Can also be
+# started by hand ("Run workflow") to redeploy after changing a repository
+# variable such as SEASONAL_THEME, without a commit.
 
 name: Deploy to Firebase Hosting on merge
 "on":
   push:
     branches:
       - main
+  workflow_dispatch:
 jobs:
   build_and_deploy:
+    # A manual run can be started on any branch: only main may go live.
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
-    # Même raison que sur la PR : l'action crée un check run.
+    # Same reason as on the PR: the action creates a check run.
     permissions:
       contents: read
       checks: write
@@ -22,6 +27,9 @@ jobs:
       - run: yarn test
       - run: yarn typecheck
       - run: yarn generate
+        env:
+          # Seasonal logo decoration; unset or empty means none.
+          NUXT_PUBLIC_SEASONAL_THEME: ${{ vars.SEASONAL_THEME }}
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: "${{ secrets.GITHUB_TOKEN }}"

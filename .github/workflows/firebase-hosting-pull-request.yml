@@ -26,6 +26,10 @@ jobs:
       - run: yarn test
       - run: yarn typecheck
       - run: yarn generate
+        env:
+          # Seasonal logo decoration; unset or empty means none. Same
+          # value as production, so the preview shows what will go live.
+          NUXT_PUBLIC_SEASONAL_THEME: ${{ vars.SEASONAL_THEME }}
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: "${{ secrets.GITHUB_TOKEN }}"
