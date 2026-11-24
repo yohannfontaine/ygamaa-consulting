@@ -5,6 +5,7 @@
 - [About](#about)
 - [Getting Started](#getting_started)
 - [Deployment](#deployment)
+- [Seasonal theme](#seasonal_theme)
 - [Security](#security)
 - [Built Using](#built_using)
 - [Contributing](CONTRIBUTING.md)
@@ -78,6 +79,31 @@ The CI/CD runs on GitHub Actions and deploys to Firebase Hosting:
 The website is available at <https://ygamaa-consulting.fr>.
 
 HTTP security headers (Content Security Policy, `X-Content-Type-Options`, `Referrer-Policy`, `Permissions-Policy`) and cache headers are defined in `firebase.json`.
+
+The production workflow can also be started by hand from the Actions tab (**Run workflow**, on `main` only), to redeploy without a commit.
+
+## 🎄 Seasonal theme <a name = "seasonal_theme"></a>
+
+The header logo can wear a small seasonal decoration, for instance a Christmas hat with a few snowflakes. It is chosen at build time, so the site stays fully static.
+
+**Turn it on or off**
+
+1. In the repository settings, under *Secrets and variables → Actions → Variables*, set `SEASONAL_THEME` to a theme id (`noel`), or empty it to turn the decoration off.
+2. Redeploy: *Actions → Deploy to Firebase Hosting on merge → Run workflow* on `main`.
+
+Case, accents and spaces are ignored (`Noël` works); an unknown value means no decoration rather than a failed build.
+
+Locally, pass the same setting through `NUXT_PUBLIC_SEASONAL_THEME`, on the command line or in a `.env` file:
+
+```
+NUXT_PUBLIC_SEASONAL_THEME=noel yarn dev
+```
+
+**Add a theme**
+
+1. Add its id to `SEASONAL_THEMES` in `composables/useSeasonalTheme.ts`.
+2. Draw it in a new component under `components/seasonal/`, which receives the anchors computed by the logo (`top` for a hat, `area` for ambient effects).
+3. Register it in the table of `components/seasonal/SeasonalDecor.vue`. `yarn typecheck` fails until this is done.
 
 ## 🔒 Security <a name = "security"></a>
 
