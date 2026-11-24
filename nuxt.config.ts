@@ -20,6 +20,13 @@ export default defineNuxtConfig({
       ],
     },
   },
+  runtimeConfig: {
+    public: {
+      // Seasonal logo decoration, empty when off. Overridden at build time by
+      // NUXT_PUBLIC_SEASONAL_THEME; see composables/useSeasonalTheme.ts.
+      seasonalTheme: "",
+    },
+  },
   modules: [
     "@nuxtjs/i18n",
     "@nuxtjs/color-mode",
